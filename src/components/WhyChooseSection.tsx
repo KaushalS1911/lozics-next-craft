@@ -49,10 +49,10 @@ export const WhyChooseSection = () => {
             return (
               <div 
                 key={index}
-                className="text-center group hover:scale-105 transition-transform duration-300"
+                className="text-center group hover:scale-105 transition-all duration-500 cursor-pointer"
               >
-                <div className="inline-block p-6 bg-primary rounded-full mb-6 group-hover:shadow-2xl group-hover:shadow-primary/50 transition-all">
-                  <Icon className="h-12 w-12 text-primary-foreground" />
+                <div className="inline-block p-6 bg-primary rounded-full mb-6 group-hover:shadow-2xl group-hover:shadow-primary/50 transition-all duration-500 group-hover:animate-bounce-slow">
+                  <Icon className="h-12 w-12 text-primary-foreground group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">
                   {feature.title}

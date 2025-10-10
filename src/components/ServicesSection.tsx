@@ -38,7 +38,7 @@ export const ServicesSection = () => {
   return (
     <section className="py-20 bg-muted">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 animate-fade-in-up">
           <div className="text-primary text-sm font-semibold mb-2 uppercase tracking-wider">
             What We Offer
           </div>
@@ -56,10 +56,11 @@ export const ServicesSection = () => {
             return (
               <Card 
                 key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-none bg-card"
+                className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-none bg-card cursor-pointer overflow-hidden"
               >
-                <CardContent className="p-8">
-                  <div className="mb-6 inline-block p-4 bg-primary/10 rounded-lg group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                <CardContent className="p-8 relative">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-500"></div>
+                  <div className="mb-6 inline-block p-4 bg-primary/10 rounded-lg group-hover:bg-primary group-hover:scale-110 transition-all duration-300 relative z-10">
                     <Icon className="h-10 w-10 text-primary group-hover:text-primary-foreground transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-foreground">
