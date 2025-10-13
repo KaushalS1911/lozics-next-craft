@@ -101,10 +101,6 @@ export const Header = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-6">
-              <Link to="/" className="text-gray-800 hover:text-primary transition-colors font-medium">
-                Home
-              </Link>
-              
               <Link to="/about" className="text-gray-800 hover:text-primary transition-colors font-medium">
                 About Us
               </Link>
@@ -112,7 +108,7 @@ export const Header = () => {
               {/* What We Serve Dropdown */}
               <div className="relative group">
                 <button className="flex items-center gap-1 text-gray-800 hover:text-primary transition-colors font-medium">
-                  What We Serve <ChevronDown className="h-4 w-4" />
+                  Services <ChevronDown className="h-4 w-4" />
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
@@ -176,7 +172,7 @@ export const Header = () => {
               </Link>
 
               <Link to="/product-gallery" className="text-gray-800 hover:text-primary transition-colors font-medium">
-                Product Gallery
+                Gallery
               </Link>
             </div>
 
@@ -198,20 +194,18 @@ export const Header = () => {
           {isMenuOpen && (
             <div className="lg:hidden pb-4 animate-fade-in">
               <div className="flex flex-col gap-2">
-                <Link to="/" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
-                  Home
-                </Link>
+
                 
                 <Link to="/about" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
                   About Us
                 </Link>
-                
+
                 <Link to="/contact" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
                   Contact Us
                 </Link>
 
                 <Link to="/product-gallery" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
-                  Product Gallery
+                  Gallery
                 </Link>
 
                 {/* What We Serve Mobile Submenu */}
@@ -220,7 +214,7 @@ export const Header = () => {
                     onClick={() => toggleMobileSubmenu('what-we-serve')}
                     className="flex items-center justify-between w-full text-gray-800 hover:text-primary transition-colors font-medium py-2"
                   >
-                    What We Serve
+                    Services
                     <ChevronDown className={`h-4 w-4 transition-transform ${openMobileSubmenu === 'what-we-serve' ? 'rotate-180' : ''}`} />
                   </button>
                   {openMobileSubmenu === 'what-we-serve' && (
