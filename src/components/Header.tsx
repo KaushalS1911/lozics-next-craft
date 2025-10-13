@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Clock, Phone, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
+import logo from "../assets/logo.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -92,7 +93,7 @@ export const Header = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img 
-                src="/src/assets/logo.png" 
+                src={logo}
                 alt="Noventra Global Sourcing Logo" 
                 className="h-32 w-auto object-contain"
               />
