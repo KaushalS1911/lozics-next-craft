@@ -1,20 +1,36 @@
 import { useState, useEffect } from "react";
-import { Button } from "./ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import slide1 from "@/assets/Home page Slides/1. Investment Casting.jpg";
+import slide2 from "@/assets/Home page Slides/2. Forging.jpg";
+import slide3 from "@/assets/Home page Slides/3. precision_machining.jpg";
+import slide4 from "@/assets/Home page Slides/4. metal-fabrication.webp";
+import slide5 from "@/assets/Home page Slides/5. laser-cutting.jpg";
 
 const slides = [
   {
-    title: "We're Global Logistics Providers",
-    subtitle: "System is a term used to refer to an organized collection symbols and processes that may be used to operate on such symbols.",
+    title: "Investment Casting Excellence",
+    subtitle: "Precision investment casting solutions for complex geometries and superior surface finishes across industries.",
+    image: slide1,
   },
   {
-    title: "Reliable Transportation Services",
-    subtitle: "Delivering excellence across borders with state-of-the-art logistics solutions and experienced professionals.",
+    title: "Premium Forging Services",
+    subtitle: "High-strength forged components manufactured with advanced techniques for automotive and industrial applications.",
+    image: slide2,
   },
   {
-    title: "Your Trusted Partner",
-    subtitle: "30+ years of experience in providing world-class logistics and transportation services worldwide.",
+    title: "Precision Machining Solutions",
+    subtitle: "State-of-the-art CNC machining capabilities delivering tight tolerances and exceptional quality for critical components.",
+    image: slide3,
+  },
+  {
+    title: "Metal Fabrication Expertise",
+    subtitle: "Comprehensive metal fabrication services combining cutting-edge technology with skilled craftsmanship.",
+    image: slide4,
+  },
+  {
+    title: "Advanced Laser Cutting",
+    subtitle: "High-precision laser cutting technology for intricate designs and clean edges across various materials.",
+    image: slide5,
   },
 ];
 
@@ -42,39 +58,21 @@ export const HeroSection = () => {
       <div 
         key={currentSlide}
         className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
       >
         <div className="absolute inset-0 bg-secondary/70"></div>
       </div>
 
-      {/* Decorative Orange Shape with Animation */}
-      <div className="absolute right-0 top-0 bottom-0 w-1/3 hidden lg:block animate-slide-in">
-        <svg viewBox="0 0 400 700" className="h-full w-full" preserveAspectRatio="none">
-          <path d="M 0 0 Q 200 350 0 700 L 400 700 L 400 0 Z" fill="hsl(var(--primary))" opacity="0.9"/>
-        </svg>
-      </div>
-
-      {/* Decorative Bottom Orange Shapes */}
-      <div className="absolute left-0 bottom-0 w-32 h-32 bg-primary rounded-full -translate-x-1/2 translate-y-1/2 opacity-80"></div>
-      <div className="absolute left-20 bottom-0 w-24 h-24 bg-primary/60 rounded-full translate-y-1/2"></div>
-
       {/* Content with slide animation */}
       <div className="container mx-auto px-4 h-full relative z-10">
-        <div className="flex items-center h-full">
+        <div className="flex items-center h-full pl-12 md:pl-16">
           <div key={currentSlide} className="max-w-3xl animate-fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight animate-slide-in">
               {slides[currentSlide].title}
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl opacity-0 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl opacity-0 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               {slides[currentSlide].subtitle}
             </p>
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg transition-all hover:scale-105 hover:shadow-2xl opacity-0 animate-fade-in"
-              style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
-            >
-              Discover More
-            </Button>
           </div>
         </div>
       </div>

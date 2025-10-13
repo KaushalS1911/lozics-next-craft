@@ -1,10 +1,51 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Clock, Phone, Search, ShoppingCart, Menu, X, ChevronDown } from "lucide-react";
+import { MapPin, Clock, Phone, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
+  const [openNestedSubmenu, setOpenNestedSubmenu] = useState<string | null>(null);
+
+  const whatWeServeItems = [
+    { title: "Investment Casting", href: "/investment-casting" },
+    { title: "SG/CI Casting", href: "/sg-ci-casting" },
+    { title: "Forgings", href: "/forgings" },
+    { title: "Precision Machined Components", href: "/precision-machined" },
+    { title: "Aluminum Die Castings", href: "/aluminum-die-casting" },
+    { title: "Hardware Components", href: "/hardware-components" },
+  ];
+
+  const testingInspectionItems = [
+    { title: "Metal Flow Simulation", href: "/metal-flow-simulation" },
+    { title: "3D Scanning", href: "/3d-scanning" },
+    { title: "CMM", href: "/cmm" },
+    { title: "PFMEA, CP, PFD", href: "/pfmea" },
+    { title: "Final Inspection Reports", href: "/inspection-reports" },
+    { title: "NDT Testing (DPT, MPI, UT, RT)", href: "/ndt-testing" },
+    { title: "DT Testing (Tensile, Impact, Hardness)", href: "/dt-testing" },
+    { title: "Microstructure Analysis", href: "/microstructure-analysis" },
+    { title: "Spectro Analysis", href: "/spectro-analysis" },
+    { title: "Corrosion Testing", href: "/corrosion-testing" },
+    { title: "Salt Spray Test", href: "/salt-spray-test" },
+  ];
+
+  const qcMeasuresItems = [
+    { title: "Certificates", href: "/certificates" },
+    { title: "Testing & Inspection", href: "#", hasSubmenu: true },
+  ];
+
+  const toggleMobileSubmenu = (menu: string) => {
+    setOpenMobileSubmenu(openMobileSubmenu === menu ? null : menu);
+    if (openMobileSubmenu !== menu) {
+      setOpenNestedSubmenu(null);
+    }
+  };
+
+  const toggleNestedSubmenu = (menu: string) => {
+    setOpenNestedSubmenu(openNestedSubmenu === menu ? null : menu);
+  };
 
   return (
     <header className="w-full">
@@ -45,58 +86,107 @@ export const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-secondary shadow-lg">
+      <nav className="bg-white shadow-lg">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 bg-primary px-6 py-4 -ml-4">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-primary-foreground rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 border-2 border-primary rounded-full"></div>
-                </div>
-                <span className="text-2xl font-bold text-primary-foreground">LOZICS</span>
-              </div>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/src/assets/logo.png" 
+                alt="Noventra Global Sourcing Logo" 
+                className="h-32 w-auto object-contain"
+              />
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
-              <Link to="/" className="text-primary-foreground hover:text-primary transition-colors font-medium">
+            <div className="hidden lg:flex items-center gap-6">
+              <Link to="/" className="text-gray-800 hover:text-primary transition-colors font-medium">
                 Home
               </Link>
+              
+              <Link to="/about" className="text-gray-800 hover:text-primary transition-colors font-medium">
+                About Us
+              </Link>
+
+              {/* What We Serve Dropdown */}
               <div className="relative group">
-                <button className="flex items-center gap-1 text-primary-foreground hover:text-primary transition-colors font-medium">
-                  Pages <ChevronDown className="h-4 w-4" />
+                <button className="flex items-center gap-1 text-gray-800 hover:text-primary transition-colors font-medium">
+                  What We Serve <ChevronDown className="h-4 w-4" />
                 </button>
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    {whatWeServeItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        to={item.href}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
+
+              <Link to="/process" className="text-gray-800 hover:text-primary transition-colors font-medium">
+                Our Process
+              </Link>
+
+              {/* Q.C. Measures Dropdown */}
               <div className="relative group">
-                <button className="flex items-center gap-1 text-primary-foreground hover:text-primary transition-colors font-medium">
-                  Shop <ChevronDown className="h-4 w-4" />
+                <button className="flex items-center gap-1 text-gray-800 hover:text-primary transition-colors font-medium">
+                  QC Measures <ChevronDown className="h-4 w-4" />
                 </button>
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    <Link
+                      to="/certificates"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                    >
+                      Certificates
+                    </Link>
+                    
+                    {/* Testing & Inspection with nested submenu */}
+                    <div className="relative group/nested">
+                      <button className="w-full flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors">
+                        <span>Testing & Inspection</span>
+                        <ChevronDown className="h-4 w-4 -rotate-90" />
+                      </button>
+                      <div className="absolute left-full top-0 ml-1 w-72 bg-white shadow-lg rounded-md opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200 z-50">
+                        <div className="py-2">
+                          {testingInspectionItems.map((item) => (
+                            <Link
+                              key={item.href}
+                              to={item.href}
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                            >
+                              {item.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="relative group">
-                <button className="flex items-center gap-1 text-primary-foreground hover:text-primary transition-colors font-medium">
-                  News <ChevronDown className="h-4 w-4" />
-                </button>
-              </div>
-              <Link to="/contact" className="text-primary-foreground hover:text-primary transition-colors font-medium">
-                Contact
+
+              <Link to="/contact" className="text-gray-800 hover:text-primary transition-colors font-medium">
+                Contact Us
+              </Link>
+
+              <Link to="/product-gallery" className="text-gray-800 hover:text-primary transition-colors font-medium">
+                Product Gallery
               </Link>
             </div>
 
             {/* Right Side Actions */}
             <div className="flex items-center gap-4">
-              <button className="text-primary-foreground hover:text-primary transition-colors hidden md:block">
-                <Search className="h-5 w-5" />
-              </button>
-              <button className="text-primary-foreground hover:text-primary transition-colors hidden md:block">
-                <ShoppingCart className="h-5 w-5" />
-              </button>
               <Button variant="default" className="hidden md:block bg-primary hover:bg-primary/90">
-                Get A Quote
+                Get a Quote
               </Button>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden text-primary-foreground"
+                className="lg:hidden text-gray-800"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -106,24 +196,98 @@ export const Header = () => {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="lg:hidden pb-4 animate-fade-in">
-              <div className="flex flex-col gap-4">
-                <Link to="/" className="text-primary-foreground hover:text-primary transition-colors font-medium">
+              <div className="flex flex-col gap-2">
+                <Link to="/" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
                   Home
                 </Link>
-                <Link to="/pages" className="text-primary-foreground hover:text-primary transition-colors font-medium">
-                  Pages
+                
+                <Link to="/about" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
+                  About Us
                 </Link>
-                <Link to="/shop" className="text-primary-foreground hover:text-primary transition-colors font-medium">
-                  Shop
+                
+                <Link to="/contact" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
+                  Contact Us
                 </Link>
-                <Link to="/news" className="text-primary-foreground hover:text-primary transition-colors font-medium">
-                  News
+
+                <Link to="/product-gallery" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
+                  Product Gallery
                 </Link>
-                <Link to="/contact" className="text-primary-foreground hover:text-primary transition-colors font-medium">
-                  Contact
+
+                {/* What We Serve Mobile Submenu */}
+                <div>
+                  <button
+                    onClick={() => toggleMobileSubmenu('what-we-serve')}
+                    className="flex items-center justify-between w-full text-gray-800 hover:text-primary transition-colors font-medium py-2"
+                  >
+                    What We Serve
+                    <ChevronDown className={`h-4 w-4 transition-transform ${openMobileSubmenu === 'what-we-serve' ? 'rotate-180' : ''}`} />
+                  </button>
+                  {openMobileSubmenu === 'what-we-serve' && (
+                    <div className="pl-4 py-2 space-y-2">
+                      {whatWeServeItems.map((item) => (
+                        <Link
+                          key={item.href}
+                          to={item.href}
+                          className="block text-sm text-gray-700 hover:text-primary transition-colors py-1"
+                        >
+                          {item.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <Link to="/process" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
+                  Our Process
                 </Link>
-                <Button variant="default" className="w-full bg-primary hover:bg-primary/90">
-                  Get A Quote
+
+                {/* Q.C. Measures Mobile Submenu */}
+                <div>
+                  <button
+                    onClick={() => toggleMobileSubmenu('qc-measures')}
+                    className="flex items-center justify-between w-full text-gray-800 hover:text-primary transition-colors font-medium py-2"
+                  >
+                    QC Measures
+                    <ChevronDown className={`h-4 w-4 transition-transform ${openMobileSubmenu === 'qc-measures' ? 'rotate-180' : ''}`} />
+                  </button>
+                  {openMobileSubmenu === 'qc-measures' && (
+                    <div className="pl-4 py-2 space-y-2">
+                      <Link
+                        to="/certificates"
+                        className="block text-sm text-gray-700 hover:text-primary transition-colors py-1"
+                      >
+                        Certificates
+                      </Link>
+                      
+                      {/* Testing & Inspection nested submenu */}
+                      <div>
+                        <button
+                          onClick={() => toggleNestedSubmenu('testing-inspection')}
+                          className="flex items-center justify-between w-full text-sm text-gray-700 hover:text-primary transition-colors py-1"
+                        >
+                          Testing & Inspection
+                          <ChevronDown className={`h-4 w-4 transition-transform ${openNestedSubmenu === 'testing-inspection' ? 'rotate-180' : ''}`} />
+                        </button>
+                        {openNestedSubmenu === 'testing-inspection' && (
+                          <div className="pl-4 py-2 space-y-2">
+                            {testingInspectionItems.map((item) => (
+                              <Link
+                                key={item.href}
+                                to={item.href}
+                                className="block text-xs text-gray-700 hover:text-primary transition-colors py-1"
+                              >
+                                {item.title}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <Button variant="default" className="w-full bg-primary hover:bg-primary/90 mt-2">
+                  Get a Quote
                 </Button>
               </div>
             </div>

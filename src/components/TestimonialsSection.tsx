@@ -11,7 +11,7 @@ const testimonials = [
   {
     name: "Sarah Mitchell",
     role: "Operations Manager",
-    content: "Reliable, professional, and efficient. We've been working with LOZICS for over 5 years and they never disappoint.",
+    content: "Reliable, professional, and efficient. We've been working with NOVENTRA GLOBAL SOURCING for over 5 years and they never disappoint.",
     rating: 5,
   },
   {

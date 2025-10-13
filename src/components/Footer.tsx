@@ -1,75 +1,124 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
+          {/* Company Intro (Admin) */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 border-2 border-primary-foreground rounded-full"></div>
-              </div>
-              <span className="text-2xl font-bold text-primary-foreground">LOZICS</span>
-            </div>
-            <p className="text-secondary-foreground/80 mb-6">
-              Your trusted partner in global logistics and transportation services. Delivering excellence across borders for over 30 years.
+            <Link to="/" className="inline-block mb-4">
+              <img 
+                src="/src/assets/logo.png" 
+                alt="Noventra Global Sourcing Logo" 
+                className="h-16 w-auto object-contain"
+              />
+            </Link>
+            {/* Tagline */}
+            <p className="text-lg font-semibold text-primary-foreground mb-3">
+              Your Manufacturing Partner
             </p>
-            <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors group">
-                <Facebook className="h-5 w-5 text-primary-foreground group-hover:text-primary-foreground" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors group">
-                <Twitter className="h-5 w-5 text-primary-foreground group-hover:text-primary-foreground" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors group">
-                <Instagram className="h-5 w-5 text-primary-foreground group-hover:text-primary-foreground" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary rounded-full flex items-center justify-center transition-colors group">
-                <Linkedin className="h-5 w-5 text-primary-foreground group-hover:text-primary-foreground" />
-              </a>
-            </div>
+            {/* Description */}
+            <p className="text-secondary-foreground/80 leading-relaxed">
+              Leading provider of precision manufacturing solutions including investment casting, 
+              aluminum die casting, forgings, and precision machined components. Quality and 
+              excellence delivered since 1990.
+            </p>
           </div>
 
-          {/* Quick Links */}
+          {/* What We Serve (Admin) */}
+          <div>
+            <h3 className="text-xl font-bold mb-6 text-primary-foreground">What We Serve</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/investment-casting" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                  Investment Casting
+                </Link>
+              </li>
+              <li>
+                <Link to="/aluminum-die-casting" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                  Aluminum Die Casting
+                </Link>
+              </li>
+              <li>
+                <Link to="/sg-ci-casting" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                  SG & CI Casting
+                </Link>
+              </li>
+              <li>
+                <Link to="/forgings" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                  Forgings
+                </Link>
+              </li>
+              <li>
+                <Link to="/precision-machined" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                  Precision Machined Components
+                </Link>
+              </li>
+              <li>
+                <Link to="/hardware-components" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                  Hardware Components
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Quick Links (Admin) */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-primary-foreground">Quick Links</h3>
             <ul className="space-y-3">
-              <li><Link to="/" className="text-secondary-foreground/80 hover:text-primary transition-colors">Home</Link></li>
-              <li><Link to="/about" className="text-secondary-foreground/80 hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Services</Link></li>
-              <li><Link to="/contact" className="text-secondary-foreground/80 hover:text-primary transition-colors">Contact</Link></li>
+              <li>
+                <Link to="/about" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                  Website Disclaimer
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                  Email Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">
+                  Presentation
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Company Details (Admin) */}
           <div>
-            <h3 className="text-xl font-bold mb-6 text-primary-foreground">Our Services</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Road Freight</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Ocean Freight</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Air Freight</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Warehousing</a></li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-xl font-bold mb-6 text-primary-foreground">Contact Info</h3>
+            <h3 className="text-xl font-bold mb-6 text-primary-foreground">Company Details</h3>
             <ul className="space-y-4">
+              {/* Address */}
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-secondary-foreground/80">380 St Kilda Road, Melbourne, Australia</span>
+                <div className="text-secondary-foreground/80">
+                  <p className="font-medium mb-1">Address</p>
+                  <p>123 Manufacturing Drive</p>
+                  <p>Industrial Area</p>
+                  <p>City, State 12345</p>
+                </div>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-secondary-foreground/80">+92 (8800) 87890</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-secondary-foreground/80">info@lozics.com</span>
+              {/* Email */}
+              <li className="flex items-start gap-3">
+                <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <div className="text-secondary-foreground/80">
+                  <p className="font-medium mb-1">Email</p>
+                  <a href="mailto:info@noventraglobal.com" className="hover:text-primary transition-colors">
+                    info@noventraglobal.com
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -80,7 +129,7 @@ export const Footer = () => {
       <div className="border-t border-secondary-foreground/10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-secondary-foreground/60">
-            <p>© 2025 LOZICS. All rights reserved.</p>
+            <p>© 2025 NOVENTRA GLOBAL SOURCING. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>

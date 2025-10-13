@@ -1,0 +1,132 @@
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Award, CheckCircle, FileCheck } from "lucide-react";
+
+const Certificates = () => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-grow">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-grid-slate-200 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
+          <div className="container mx-auto px-4 relative">
+            <div className="max-w-3xl mx-auto text-center">
+              <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                Quality Control & Testing
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Quality Certificates & Certifications</h1>
+              <p className="text-xl text-gray-600">Industry-recognized quality standards and certifications</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Content Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <Award className="w-20 h-20 text-primary mx-auto mb-6" />
+              <h2 className="text-3xl font-bold mb-4">Committed to Quality Excellence</h2>
+              <p className="text-gray-700 text-lg">
+                Our certifications demonstrate our commitment to maintaining the highest standards of quality, safety, and environmental responsibility in manufacturing.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <div className="bg-white p-8 rounded-lg shadow-md text-center">
+                <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">ISO 9001:2015</h3>
+                <p className="text-gray-700">
+                  Quality Management System certification ensuring consistent product quality and customer satisfaction.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-md text-center">
+                <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">IATF 16949</h3>
+                <p className="text-gray-700">
+                  Automotive quality management system standard for suppliers to the automotive industry.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-md text-center">
+                <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">ISO 14001</h3>
+                <p className="text-gray-700">
+                  Environmental Management System certification demonstrating our commitment to sustainability.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <div className="text-center mb-8">
+                <FileCheck className="w-16 h-16 text-primary mx-auto mb-4" />
+                <h3 className="text-2xl font-semibold mb-2">Certificates Gallery</h3>
+                <p className="text-gray-700">Detailed certificates will be available here soon</p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-white p-6 rounded-lg shadow border-2 border-dashed border-gray-300">
+                  <div className="aspect-[4/3] bg-gray-100 rounded flex items-center justify-center">
+                    <p className="text-gray-400 text-sm">Certificate Image</p>
+                  </div>
+                  <p className="mt-3 text-center font-semibold text-gray-600">Coming Soon</p>
+                </div>
+
+                <div className="bg-white p-6 rounded-lg shadow border-2 border-dashed border-gray-300">
+                  <div className="aspect-[4/3] bg-gray-100 rounded flex items-center justify-center">
+                    <p className="text-gray-400 text-sm">Certificate Image</p>
+                  </div>
+                  <p className="mt-3 text-center font-semibold text-gray-600">Coming Soon</p>
+                </div>
+
+                <div className="bg-white p-6 rounded-lg shadow border-2 border-dashed border-gray-300">
+                  <div className="aspect-[4/3] bg-gray-100 rounded flex items-center justify-center">
+                    <p className="text-gray-400 text-sm">Certificate Image</p>
+                  </div>
+                  <p className="mt-3 text-center font-semibold text-gray-600">Coming Soon</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-16">
+              <h3 className="text-2xl font-semibold mb-6 text-center">Our Quality Commitment</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-primary/5 p-6 rounded-lg">
+                  <h4 className="text-xl font-semibold mb-3">Continuous Improvement</h4>
+                  <p className="text-gray-700">
+                    We are committed to continuous improvement in all aspects of our operations, from manufacturing processes to customer service.
+                  </p>
+                </div>
+                <div className="bg-primary/5 p-6 rounded-lg">
+                  <h4 className="text-xl font-semibold mb-3">Customer Focus</h4>
+                  <p className="text-gray-700">
+                    Our certifications reflect our dedication to understanding and meeting customer requirements and expectations.
+                  </p>
+                </div>
+                <div className="bg-primary/5 p-6 rounded-lg">
+                  <h4 className="text-xl font-semibold mb-3">Regulatory Compliance</h4>
+                  <p className="text-gray-700">
+                    We maintain compliance with all applicable industry regulations and standards across all our manufacturing facilities.
+                  </p>
+                </div>
+                <div className="bg-primary/5 p-6 rounded-lg">
+                  <h4 className="text-xl font-semibold mb-3">Employee Training</h4>
+                  <p className="text-gray-700">
+                    Regular training and skill development programs ensure our team stays current with best practices and standards.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Certificates;
+
