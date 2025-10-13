@@ -108,7 +108,7 @@ export const Header = () => {
               {/* What We Serve Dropdown */}
               <div className="relative group">
                 <button className="flex items-center gap-1 text-gray-800 hover:text-primary transition-colors font-medium">
-                  Services <ChevronDown className="h-4 w-4" />
+                  What We Serve <ChevronDown className="h-4 w-4" />
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
