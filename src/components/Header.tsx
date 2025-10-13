@@ -57,12 +57,12 @@ export const Header = () => {
             <div className="flex flex-wrap items-center gap-4 md:gap-6">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>380 St Kilda Road, Australia</span>
+                <span>21/1, 22/1 Paramdham Industrial Estate - 3, Aji Ring Road, Rajkot, India</span>
               </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Clock className="h-4 w-4 text-primary" />
-                <span>Mon - Sat: 8am - 5pm</span>
-              </div>
+              {/*<div className="flex items-center gap-2 text-muted-foreground">*/}
+              {/*  <Clock className="h-4 w-4 text-primary" />*/}
+              {/*  <span>Mon - Sat: 8am - 5pm</span>*/}
+              {/*</div>*/}
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary" />
                 <span>+92 (8800) 87890</span>

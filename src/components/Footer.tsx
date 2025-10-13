@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Mail } from "lucide-react";
+import logo from "../assets/logo.png";
 
 export const Footer = () => {
   return (
@@ -10,9 +11,9 @@ export const Footer = () => {
           <div>
             <Link to="/" className="inline-block mb-4">
               <img 
-                src="/src/assets/logo.png" 
+                src={logo}
                 alt="Noventra Global Sourcing Logo" 
-                className="h-16 w-auto object-contain"
+                className="h-32 w-auto object-contain"
               />
             </Link>
             {/* Tagline */}
@@ -105,9 +106,9 @@ export const Footer = () => {
                 <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div className="text-secondary-foreground/80">
                   <p className="font-medium mb-1">Address</p>
-                  <p>123 Manufacturing Drive</p>
-                  <p>Industrial Area</p>
-                  <p>City, State 12345</p>
+                  <p>RS No. 236 P 3, Plot No. 21/1, 22/1</p>
+                  <p>Paramdham Industrial Estate - 3, Aji Ring Road, Near Murlidhar Kanta</p>
+                  <p>Rajkot, Gujarat, India - 360003 </p>
                 </div>
               </li>
               {/* Email */}
