@@ -37,26 +37,58 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log("Form Data:", formData);
-    console.log("Selected File:", selectedFile);
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      mobile: "",
-      designation: "",
-      companyName: "",
-      companyEmail: "",
-      message: ""
-    });
-    setSelectedFile(null);
-    setIsSubmitting(false);
-    
-    alert("Thank you for your message! We'll get back to you soon.");
+    try {
+      // Create FormData object for multipart/form-data
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('mobile', formData.mobile);
+      formDataToSend.append('designation', formData.designation);
+      formDataToSend.append('companyName', formData.companyName);
+      formDataToSend.append('companyEmail', formData.companyEmail);
+      formDataToSend.append('message', formData.message);
+      
+      // Add file if selected
+      if (selectedFile) {
+        formDataToSend.append('file', selectedFile);
+      }
+      
+      // Send to backend API
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
+        // Reset form on success
+        setFormData({
+          name: "",
+          email: "",
+          mobile: "",
+          designation: "",
+          companyName: "",
+          companyEmail: "",
+          message: ""
+        });
+        setSelectedFile(null);
+        
+        alert("✅ " + result.message);
+      } else {
+        // Handle validation or server errors
+        const errorMessage = result.errors 
+          ? result.errors.map((err: any) => err.message).join('\n')
+          : result.message || 'Failed to send message. Please try again.';
+        
+        alert("❌ " + errorMessage);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("❌ An error occurred while sending your message. Please check if the backend server is running and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [

@@ -4,6 +4,65 @@
 
 **URL**: https://lovable.dev/projects/a8b6324f-f66e-4825-8615-225d5841903d
 
+## 🚀 Quick Start
+
+This project includes both a **frontend** (React/Vite) and a **backend** (Express.js API for contact form).
+
+### Option 1: Start Both Frontend and Backend (Recommended)
+
+```sh
+# Step 1: Clone the repository
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install frontend dependencies
+npm i
+
+# Step 4: Set up backend (IMPORTANT!)
+# Follow the detailed instructions in BACKEND_SETUP.md
+cd backend
+npm install
+# Configure your .env file with email credentials
+cd ..
+
+# Step 5: Start both servers
+./start-all.sh
+```
+
+### Option 2: Start Frontend Only
+
+```sh
+npm i
+npm run dev
+```
+
+### Option 3: Start Backend Only
+
+```sh
+cd backend
+npm install
+# Configure .env file
+npm run dev
+```
+
+## 📧 Contact Form Backend
+
+This project includes a fully functional backend for handling contact form submissions with email notifications.
+
+**Features:**
+
+- ✅ Contact form submission handling
+- ✅ Email notifications to admin
+- ✅ Confirmation emails to users
+- ✅ File upload support (PDF, DOC, DOCX, JPG, PNG, XLS, XLSX)
+- ✅ Input validation and sanitization
+- ✅ Beautiful HTML email templates
+
+**Setup Instructions:**
+See [BACKEND_SETUP.md](./BACKEND_SETUP.md) for detailed backend configuration instructions.
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
