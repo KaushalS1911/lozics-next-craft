@@ -5,6 +5,7 @@ import { MapPin, Phone, Mail, Clock, Send, ArrowRight, Building2, MessageCircle,
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { getEndpointURL } from "@/config/api";
 import metalFabrication from "../assets/Home page Slides/4. metal-fabrication.webp";
 
 const Contact = () => {
@@ -54,7 +55,7 @@ const Contact = () => {
       }
       
       // Send to backend API
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch(getEndpointURL('contact'), {
         method: 'POST',
         body: formDataToSend,
       });

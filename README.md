@@ -60,8 +60,39 @@ This project includes a fully functional backend for handling contact form submi
 - ✅ Input validation and sanitization
 - ✅ Beautiful HTML email templates
 
-**Setup Instructions:**
-See [BACKEND_SETUP.md](./BACKEND_SETUP.md) for detailed backend configuration instructions.
+### 🚀 Quick Setup
+
+**Local Development:**
+
+```bash
+cd backend
+npm install
+# Create .env file (see SAMPLE_ENV_VALUES.md)
+npm run test-email
+npm run dev
+```
+
+**Deploy to Render:**
+
+- Follow: `DEPLOYMENT_CHECKLIST.md` for step-by-step guide
+- Set environment variables in Render dashboard
+- Your backend URL: `https://your-app.onrender.com`
+
+### 📚 Complete Documentation
+
+| Document                                                     | Purpose                                      |
+| ------------------------------------------------------------ | -------------------------------------------- |
+| **[SAMPLE_ENV_VALUES.md](./SAMPLE_ENV_VALUES.md)** ⭐        | Environment variable templates (start here!) |
+| **[DEPLOYMENT_CHECKLIST.md](./DEPLOYMENT_CHECKLIST.md)** ⭐  | Step-by-step deployment to Render            |
+| **[RENDER_DEPLOYMENT.md](./RENDER_DEPLOYMENT.md)**           | Detailed Render deployment guide             |
+| **[ENV_SETUP_GUIDE.md](./ENV_SETUP_GUIDE.md)**               | Complete environment setup                   |
+| **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)**               | API docs & troubleshooting                   |
+| **[BACKEND_SETUP.md](./BACKEND_SETUP.md)**                   | Backend configuration details                |
+| **[SYSTEM_FLOW.md](./SYSTEM_FLOW.md)**                       | Architecture & flow diagrams                 |
+| **[IMPLEMENTATION_SUMMARY.md](./IMPLEMENTATION_SUMMARY.md)** | What was built                               |
+| **[README_DOCS.md](./README_DOCS.md)**                       | Documentation guide                          |
+
+**👉 New to this project?** Start with `SAMPLE_ENV_VALUES.md` and `DEPLOYMENT_CHECKLIST.md`
 
 ## How can I edit this code?
 

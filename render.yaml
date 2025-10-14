@@ -1,0 +1,33 @@
+services:
+  # Backend Web Service
+  - type: web
+    name: lozics-backend
+    runtime: node
+    region: oregon  # Choose: oregon, frankfurt, singapore
+    plan: free  # Options: free, starter, standard, pro
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/contact/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: EMAIL_SERVICE
+        sync: false  # Set manually in Render dashboard
+      - key: EMAIL_HOST
+        sync: false
+      - key: EMAIL_PORT
+        sync: false
+      - key: EMAIL_SECURE
+        sync: false
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: MAX_FILE_SIZE
+        value: "10485760"
+
