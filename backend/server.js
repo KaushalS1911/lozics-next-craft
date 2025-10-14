@@ -3,7 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import contactRoutes from "./routes/contact.routes.js";
 import { verifyEmailConfig } from "./services/emailService.js";
-
+import {frontendUrl} from "./config/email.config.js";
 
 // Load environment variables
 dotenv.config();
