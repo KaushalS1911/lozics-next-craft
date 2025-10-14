@@ -43,12 +43,12 @@ export const AboutSection = () => {
           <div className="relative">
             <img
               src={aboutImg}
-              alt="Logistics professionals working"
+              alt="Precision manufacturing and supply chain operations"
               className="rounded-lg shadow-2xl w-full"
             />
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-8 rounded-lg shadow-xl">
-              <div className="text-6xl font-bold">30</div>
-              <div className="text-sm mt-2">Years of Cleaning<br />experience</div>
+              <div className="text-6xl font-bold">35</div>
+              <div className="text-sm mt-2">Years of Manufacturing<br />Excellence</div>
             </div>
           </div>
 
@@ -58,18 +58,18 @@ export const AboutSection = () => {
               Get to know us
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Moving products across borders
+              Your Trusted Manufacturing Partner
             </h2>
             
             <h3 className="text-2xl font-semibold mb-4 text-foreground">
-              Create Opportunity to Reach Potential
+              World-Class Supply Chain Platform Since 1990
             </h3>
             <p className="text-muted-foreground mb-6 text-lg">
-              There are many variations of passages of lorem Ipsum available majority have suffered ipsum even slightly believable.
+              Noventra Global Sourcing is a leading provider of precision manufacturing solutions, specializing in investment casting, aluminum die casting, forgings, and precision machined components. With over three decades of manufacturing excellence, we deliver low-risk, cost-effective, and sustainable global supply chain solutions to our clients worldwide.
             </p>
 
             <h3 className="text-2xl font-semibold mb-4 text-foreground">
-              We Provide Full Range of Logistics Transportation Worldwide
+              Strategic Partnership for Engineered Components
             </h3>
 
             <Button 
@@ -81,9 +81,9 @@ export const AboutSection = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-border">
-              <CounterAnimation end={830} label="Projects Completed" />
-              <CounterAnimation end={490} label="Happy Customers" />
-              <CounterAnimation end={180} label="Expert Team" />
+              <CounterAnimation end={500} label="Projects Completed" />
+              <CounterAnimation end={100} label="Global Clients" />
+              <CounterAnimation end={35} label="Years of Excellence" />
             </div>
           </div>
         </div>

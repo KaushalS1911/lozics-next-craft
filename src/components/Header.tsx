@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Clock, Phone, Menu, X, ChevronDown } from "lucide-react";
+import { MapPin, Phone, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo svg FINAL_122137.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -95,7 +95,7 @@ export const Header = () => {
               <img 
                 src={logo}
                 alt="Noventra Global Sourcing Logo" 
-                className="h-32 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
             </Link>
 

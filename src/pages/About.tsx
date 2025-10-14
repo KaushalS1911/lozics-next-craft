@@ -16,6 +16,7 @@ import {
   Zap,
   Truck
 } from "lucide-react";
+import heroBg from "../assets/hero-bg.jpg";
 
 const About = () => {
   const stats = [
@@ -85,23 +86,32 @@ const About = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
-          <div className="container mx-auto px-4">
+        <section className="relative py-20 text-white overflow-hidden">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroBg})` }}
+          ></div>
+          
+          {/* Backdrop Filter Overlay */}
+          <div className="absolute inset-0 glass-morphism-navy-orange"></div>
+          
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg">
                 About Noventra Global Sourcing
               </h1>
-              <p className="text-xl md:text-2xl mb-8 opacity-90">
+              <p className="text-xl md:text-2xl mb-8 opacity-95 drop-shadow-md">
                 Creating a world-class supply chain platform that bridges global diversity in communication, distance, and culture.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Badge variant="secondary" className="text-lg px-4 py-2">
+                <Badge variant="secondary" className="text-lg px-4 py-2 glass-badge text-white font-semibold">
                   Global Sourcing
                 </Badge>
-                <Badge variant="secondary" className="text-lg px-4 py-2">
+                <Badge variant="secondary" className="text-lg px-4 py-2 glass-badge text-white font-semibold">
                   Strategic Partnership
                 </Badge>
-                <Badge variant="secondary" className="text-lg px-4 py-2">
+                <Badge variant="secondary" className="text-lg px-4 py-2 glass-badge text-white font-semibold">
                   Cost Effective
                 </Badge>
               </div>
@@ -109,8 +119,8 @@ const About = () => {
           </div>
           
           {/* Decorative Elements */}
-          <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary-foreground/10 rounded-full -translate-x-16 translate-y-16"></div>
-          <div className="absolute top-0 right-0 w-24 h-24 bg-primary-foreground/10 rounded-full translate-x-12 -translate-y-12"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/20 rounded-full -translate-x-16 translate-y-16 blur-2xl"></div>
+          <div className="absolute top-0 right-0 w-24 h-24 bg-primary/20 rounded-full translate-x-12 -translate-y-12 blur-2xl"></div>
         </section>
 
         {/* Company Story Section */}
@@ -282,13 +292,13 @@ const About = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-primary text-primary-foreground">
+        <section className="py-20 bg-primary text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl font-bold mb-6">
                 Ready to Partner With Us?
               </h2>
-              <p className="text-xl mb-8 opacity-90">
+              <p className="text-xl mb-8 opacity-95">
                 Trust Noventra Global Sourcing for excellence, innovation, and an unwavering 
                 commitment to your success in navigating the complexities of the global supply chain.
               </p>
@@ -296,14 +306,14 @@ const About = () => {
                 <Button 
                   variant="secondary" 
                   size="lg" 
-                  className="text-primary hover:bg-primary-foreground/90"
+                  className="bg-white text-primary hover:bg-white/90"
                 >
                   Get a Quote
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                  className="border-2 border-white text-white hover:bg-white hover:text-primary"
                 >
                   Contact Us
                 </Button>

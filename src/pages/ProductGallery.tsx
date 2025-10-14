@@ -4,8 +4,9 @@ import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { X, ZoomIn, Grid3x3, List } from "lucide-react";
+import { X, ZoomIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroBg from "../assets/hero-bg.jpg";
 
 // Import images dynamically using Vite's glob import with proper syntax
 // Forgings
@@ -78,7 +79,28 @@ const sgciPumpPartsImageArray = Object.values(sgciPumpPartsImages) as string[];
 
 const ProductGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+  // Combine all investment casting images
+  const allInvestmentCastingImages = [
+    ...automobileImageArray,
+    ...buildingImageArray,
+    ...engineeringImageArray,
+    ...fireFightingImageArray,
+    ...industrialPumpImageArray,
+    ...industrialValveImageArray,
+    ...industrialValveCastingImageArray,
+    ...powerPlantImageArray,
+    ...structureImageArray
+  ];
+
+  // Combine all SG-CI casting images
+  const allSGCIImages = [
+    ...sgciAutomobileImageArray,
+    ...sgciElectricMotorImageArray,
+    ...sgciGearBoxImageArray,
+    ...sgciGeneralEngImageArray,
+    ...sgciPumpPartsImageArray
+  ];
 
   const categories = [
     {
@@ -96,74 +118,25 @@ const ProductGallery = () => {
       count: hardwareImageArray.length
     },
     {
-      id: "investment-automobile",
-      name: "Investment Casting - Automobile",
-      description: "Precision investment castings for automotive industry",
-      images: automobileImageArray,
-      count: automobileImageArray.length
-    },
-    {
-      id: "investment-building",
-      name: "Investment Casting - Building & Water Treatment",
-      description: "Castings for building and water treatment applications",
-      images: buildingImageArray,
-      count: buildingImageArray.length
-    },
-    {
-      id: "investment-engineering",
-      name: "Investment Casting - Engineering & Automation",
-      description: "Engineering and automation casting solutions",
-      images: engineeringImageArray,
-      count: engineeringImageArray.length
-    },
-    {
-      id: "investment-firefighting",
-      name: "Investment Casting - Fire Fighting Equipment",
-      description: "Reliable castings for fire fighting equipment",
-      images: fireFightingImageArray,
-      count: fireFightingImageArray.length
-    },
-    {
-      id: "investment-pump",
-      name: "Investment Casting - Industrial Pump",
-      description: "Industrial pump components and castings",
-      images: industrialPumpImageArray,
-      count: industrialPumpImageArray.length
-    },
-    {
-      id: "investment-valve",
-      name: "Investment Casting - Industrial Valve",
-      description: "High-precision industrial valve castings",
-      images: industrialValveImageArray,
-      count: industrialValveImageArray.length
-    },
-    {
-      id: "investment-valve-casting",
-      name: "Investment Casting - Valve Casting",
-      description: "Specialized valve casting solutions",
-      images: industrialValveCastingImageArray,
-      count: industrialValveCastingImageArray.length
-    },
-    {
-      id: "investment-powerplant",
-      name: "Investment Casting - Power Plant Boiler",
-      description: "Power plant boiler parts and components",
-      images: powerPlantImageArray,
-      count: powerPlantImageArray.length
-    },
-    {
-      id: "investment-structure",
-      name: "Investment Casting - Structure & Hardware",
-      description: "Structural and hardware casting solutions",
-      images: structureImageArray,
-      count: structureImageArray.length
+      id: "investment-casting",
+      name: "Investment Casting",
+      description: "Precision investment castings for diverse industrial applications including automotive, pumps, valves, and more",
+      images: allInvestmentCastingImages,
+      count: allInvestmentCastingImages.length
     },
     {
       id: "precision-machining",
-      name: "Precision Machined Components",
+      name: "Precision Machining",
       description: "CNC machined parts with tight tolerances",
       images: precisionMachiningImageArray,
       count: precisionMachiningImageArray.length
+    },
+    {
+      id: "sgci-casting",
+      name: "SG-CI Casting",
+      description: "Ductile iron castings for automotive, pumps, gearboxes, and general engineering applications",
+      images: allSGCIImages,
+      count: allSGCIImages.length
     },
     {
       id: "pressure-die-casting",
@@ -171,41 +144,6 @@ const ProductGallery = () => {
       description: "High-pressure die cast aluminum components",
       images: pressureDieCastingImageArray,
       count: pressureDieCastingImageArray.length
-    },
-    {
-      id: "sgci-automobile",
-      name: "SG-CI Sand Casting - Automobile",
-      description: "Ductile iron castings for automotive applications",
-      images: sgciAutomobileImageArray,
-      count: sgciAutomobileImageArray.length
-    },
-    {
-      id: "sgci-electric-motor",
-      name: "SG-CI Sand Casting - Electric Motor",
-      description: "Electric motor housings and components",
-      images: sgciElectricMotorImageArray,
-      count: sgciElectricMotorImageArray.length
-    },
-    {
-      id: "sgci-gearbox",
-      name: "SG-CI Sand Casting - Gear Box",
-      description: "Gearbox housings and related components",
-      images: sgciGearBoxImageArray,
-      count: sgciGearBoxImageArray.length
-    },
-    {
-      id: "sgci-general",
-      name: "SG-CI Sand Casting - General Engineering",
-      description: "General engineering casting solutions",
-      images: sgciGeneralEngImageArray,
-      count: sgciGeneralEngImageArray.length
-    },
-    {
-      id: "sgci-pump",
-      name: "SG-CI Sand Casting - Pump Parts",
-      description: "Pump parts and components in ductile iron",
-      images: sgciPumpPartsImageArray,
-      count: sgciPumpPartsImageArray.length
     }
   ];
 
@@ -235,7 +173,7 @@ const ProductGallery = () => {
     }
 
     return (
-      <div className={`grid gap-4 ${viewMode === 'grid' ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4' : 'grid-cols-1 md:grid-cols-2'}`}>
+      <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {images.map((image, index) => {
           const imageName = formatImageName(image);
           return (
@@ -268,56 +206,46 @@ const ProductGallery = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative container mx-auto px-4 py-24 lg:py-32">
+      <section className="relative py-20 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBg})` }}
+        ></div>
+        
+        {/* Backdrop Filter Overlay */}
+        <div className="absolute inset-0 glass-morphism-navy-orange"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary-foreground border-primary/30">
+            <Badge variant="secondary" className="mb-6 glass-badge text-white font-semibold">
               Product Showcase
             </Badge>
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
               Product Gallery
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed drop-shadow-md">
               Explore our comprehensive range of precision-engineered components across multiple manufacturing processes
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Badge variant="outline" className="bg-white/10 border-white/30 text-white">
+              <Badge variant="secondary" className="text-lg px-4 py-2 glass-badge text-white font-semibold">
                 {categories.reduce((acc, cat) => acc + cat.count, 0)}+ Products
               </Badge>
-              <Badge variant="outline" className="bg-white/10 border-white/30 text-white">
+              <Badge variant="secondary" className="text-lg px-4 py-2 glass-badge text-white font-semibold">
                 {categories.length} Categories
               </Badge>
             </div>
           </div>
         </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/20 rounded-full -translate-x-16 translate-y-16 blur-2xl"></div>
+        <div className="absolute top-0 right-0 w-24 h-24 bg-primary/20 rounded-full translate-x-12 -translate-y-12 blur-2xl"></div>
       </section>
 
       {/* Gallery Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          {/* View Mode Toggle */}
-          <div className="flex justify-end mb-6">
-            <div className="flex gap-2">
-              <Button
-                variant={viewMode === 'grid' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setViewMode('grid')}
-              >
-                <Grid3x3 className="h-4 w-4 mr-2" />
-                Grid
-              </Button>
-              <Button
-                variant={viewMode === 'list' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setViewMode('list')}
-              >
-                <List className="h-4 w-4 mr-2" />
-                List
-              </Button>
-            </div>
-          </div>
-
           <Tabs defaultValue={categories[0].id} className="w-full">
             <TabsList className="w-full flex-wrap h-auto justify-start gap-2 bg-white p-2 rounded-lg shadow-sm mb-8">
               {categories.map((category) => (

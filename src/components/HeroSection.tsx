@@ -80,14 +80,14 @@ export const HeroSection = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-primary/80 hover:bg-primary text-primary-foreground p-3 rounded-full transition-all"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-md hover:bg-primary text-white p-3 rounded-full transition-all border border-white/30 hover:border-primary shadow-lg hover:shadow-xl hover:scale-110"
         aria-label="Previous slide"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-primary/80 hover:bg-primary text-primary-foreground p-3 rounded-full transition-all"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-md hover:bg-primary text-white p-3 rounded-full transition-all border border-white/30 hover:border-primary shadow-lg hover:shadow-xl hover:scale-110"
         aria-label="Next slide"
       >
         <ChevronRight className="h-6 w-6" />
@@ -99,8 +99,8 @@ export const HeroSection = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`h-2 rounded-full transition-all ${
-              index === currentSlide ? "w-12 bg-primary" : "w-2 bg-primary-foreground/50"
+            className={`h-2 rounded-full transition-all shadow-md ${
+              index === currentSlide ? "w-12 bg-primary" : "w-2 bg-white/60 hover:bg-white"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

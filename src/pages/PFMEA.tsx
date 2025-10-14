@@ -9,15 +9,15 @@ const PFMEA = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-grid-slate-200 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
-          <div className="container mx-auto px-4 relative">
+        <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0 glass-morphism-orange"></div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+              <div className="inline-block px-4 py-2 glass-badge text-white rounded-full text-sm font-semibold mb-4">
                 Quality Control & Testing
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">PFMEA, CP & PFD</h1>
-              <p className="text-xl text-gray-600">Comprehensive process quality planning and risk management</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">PFMEA, CP & PFD</h1>
+              <p className="text-xl text-white/95 drop-shadow-md">Comprehensive process quality planning and risk management</p>
             </div>
           </div>
         </section>

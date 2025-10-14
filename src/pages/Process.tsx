@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Search, HandHeart, Settings, CheckCircle, Truck, ArrowRight, Check, Star } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import precisionMachining from "../assets/Home page Slides/3. precision_machining.jpg";
 
 const Process = () => {
   // TODO: Replace placeholder image divs with actual images
@@ -118,29 +119,42 @@ const Process = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative text-white py-20 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${precisionMachining})` }}
+        ></div>
+        
+        {/* Backdrop Filter Overlay */}
+        <div className="absolute inset-0 glass-morphism-navy-orange"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">Our Process</h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <h1 className="text-5xl font-bold mb-6 drop-shadow-lg">Our Process</h1>
+            <p className="text-xl text-white/95 mb-8 drop-shadow-md">
               A systematic approach to manufacturing excellence, ensuring quality, efficiency, and customer satisfaction at every step of your project.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
+              <Badge variant="secondary" className="glass-badge text-white px-4 py-2 font-semibold">
                 <Star className="w-4 h-4 mr-2" />
                 Quality Assured
               </Badge>
-              <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
+              <Badge variant="secondary" className="glass-badge text-white px-4 py-2 font-semibold">
                 <Check className="w-4 h-4 mr-2" />
                 Transparent Process
               </Badge>
-              <Badge variant="secondary" className="bg-white/20 text-white border-white/30 px-4 py-2">
+              <Badge variant="secondary" className="glass-badge text-white px-4 py-2 font-semibold">
                 <ArrowRight className="w-4 h-4 mr-2" />
                 On-Time Delivery
               </Badge>
             </div>
           </div>
         </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/20 rounded-full -translate-x-16 translate-y-16 blur-2xl"></div>
+        <div className="absolute top-0 right-0 w-24 h-24 bg-primary/20 rounded-full translate-x-12 -translate-y-12 blur-2xl"></div>
       </section>
 
       <main className="py-20">
@@ -281,10 +295,10 @@ const Process = () => {
                 Let us guide you through our proven process to deliver exceptional manufacturing solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all hover:scale-105">
                   Get a Quote
                 </button>
-                <button className="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                <button className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold shadow-sm hover:shadow-md transition-all hover:scale-105">
                   Contact Us
                 </button>
               </div>

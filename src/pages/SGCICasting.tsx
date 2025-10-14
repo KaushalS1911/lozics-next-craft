@@ -104,25 +104,25 @@ const SGCICasting = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-orange-900 via-red-900 to-orange-800 text-white">
-        <div className="absolute inset-0 bg-black/40"></div>
+      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+        <div className="absolute inset-0 glass-morphism-orange"></div>
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary-foreground border-primary/30">
+            <Badge variant="secondary" className="mb-6 glass-badge text-white font-semibold">
               Sand Casting Solutions
             </Badge>
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
               SG/CI Casting
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-white/95 mb-8 leading-relaxed drop-shadow-md">
               Expert sand casting services for Spheroidal Graphite Iron and Gray Cast Iron components. 
               Delivering robust, reliable castings for demanding applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button size="lg">
                 Get Quote <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-900">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary">
                 Learn More
               </Button>
             </div>
