@@ -104,20 +104,6 @@ const ProductGallery = () => {
 
   const categories = [
     {
-      id: "forgings",
-      name: "Forgings",
-      description: "High-quality forged components for automotive and industrial applications",
-      images: forgingImageArray,
-      count: forgingImageArray.length
-    },
-    {
-      id: "hardware",
-      name: "Hardware Components",
-      description: "Precision hardware components and fasteners",
-      images: hardwareImageArray,
-      count: hardwareImageArray.length
-    },
-    {
       id: "investment-casting",
       name: "Investment Casting",
       description: "Precision investment castings for diverse industrial applications including automotive, pumps, valves, and more",
@@ -125,11 +111,11 @@ const ProductGallery = () => {
       count: allInvestmentCastingImages.length
     },
     {
-      id: "precision-machining",
-      name: "Precision Machining",
-      description: "CNC machined parts with tight tolerances",
-      images: precisionMachiningImageArray,
-      count: precisionMachiningImageArray.length
+      id: "forgings",
+      name: "Forgings",
+      description: "High-quality forged components for automotive and industrial applications",
+      images: forgingImageArray,
+      count: forgingImageArray.length
     },
     {
       id: "sgci-casting",
@@ -144,7 +130,24 @@ const ProductGallery = () => {
       description: "High-pressure die cast aluminum components",
       images: pressureDieCastingImageArray,
       count: pressureDieCastingImageArray.length
-    }
+    },
+    {
+      id: "precision-machining",
+      name: "Precision Machining",
+      description: "CNC machined parts with tight tolerances",
+      images: precisionMachiningImageArray,
+      count: precisionMachiningImageArray.length
+    },
+    {
+      id: "hardware",
+      name: "Hardware Components",
+      description: "Precision hardware components and fasteners",
+      images: hardwareImageArray,
+      count: hardwareImageArray.length
+    },
+
+
+
   ];
 
   // Helper function to extract and format filename from image path
@@ -188,12 +191,12 @@ const ProductGallery = () => {
                 className="h-full w-full object-contain group-hover:scale-110 transition-transform duration-300"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex flex-col items-center justify-center">
-                <ZoomIn className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-2" />
-                <div className="text-white text-sm font-medium text-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {imageName}
-                </div>
-              </div>
+              {/*<div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex flex-col items-center justify-center">*/}
+              {/*  <ZoomIn className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-2" />*/}
+              {/*  <div className="text-white text-sm font-medium text-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">*/}
+              {/*    {imageName}*/}
+              {/*  </div>*/}
+              {/*</div>*/}
             </div>
           );
         })}
@@ -293,9 +296,9 @@ const ProductGallery = () => {
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
-              <div className="bg-black/80 text-white px-6 py-3 rounded-lg mt-4">
-                <h3 className="text-lg font-semibold">{formatImageName(selectedImage)}</h3>
-              </div>
+              {/*<div className="bg-black/80 text-white px-6 py-3 rounded-lg mt-4">*/}
+              {/*  <h3 className="text-lg font-semibold">{formatImageName(selectedImage)}</h3>*/}
+              {/*</div>*/}
             </div>
           )}
         </DialogContent>

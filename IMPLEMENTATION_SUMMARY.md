@@ -309,7 +309,7 @@ your message and our team will review it shortly.
 We strive to respond to all inquiries within 24 hours.
 
 📞 Contact Information
-Phone: +92 (8800) 87890
+Phone: +91 9106697517
 Email: contact@noventraglobal.com
 Address: [Full address]
 

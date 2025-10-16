@@ -17,7 +17,7 @@ import {
   Wrench,
   Nut,
   Bolt,
-  Screw
+  // Screw
 } from "lucide-react";
 
 const HardwareComponents = () => {
@@ -156,7 +156,7 @@ const HardwareComponents = () => {
     },
     {
       title: "Lead Time",
-      value: "1-3 weeks",
+      value: "3-5 weeks",
       description: "Fast delivery times"
     }
   ];

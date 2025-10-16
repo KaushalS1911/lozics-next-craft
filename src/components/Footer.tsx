@@ -22,8 +22,8 @@ export const Footer = () => {
             </p>
             {/* Description */}
             <p className="text-secondary-foreground/70 leading-relaxed">
-              Leading provider of precision manufacturing solutions including investment casting, 
-              aluminum die casting, forgings, and precision machined components
+              Leading provider of precision manufacturing parts including investment casting,
+              aluminum die casting, shell moulding, forgings, and precision machined components
             </p>
           </div>
 
@@ -88,11 +88,11 @@ export const Footer = () => {
                   Email Policy
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-secondary-foreground/70 hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">
-                  Presentation
-                </a>
-              </li>
+              {/*<li>*/}
+              {/*  <a href="#" className="text-secondary-foreground/70 hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">*/}
+              {/*    Presentation*/}
+              {/*  </a>*/}
+              {/*</li>*/}
             </ul>
           </div>
 

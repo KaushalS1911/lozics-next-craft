@@ -21,7 +21,7 @@ const PortfolioSection = () => {
       category: "casting",
       description: "Precision investment casting for complex geometries and superior surface finish",
       image: "https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=800&auto=format&fit=crop&q=80",
-      stats: { projects: "500+", accuracy: "±0.05mm" },
+      stats: { projects: "35+", accuracy: "±0.01mm" },
       link: "/investment-casting"
     },
     {
@@ -30,7 +30,7 @@ const PortfolioSection = () => {
       category: "machining",
       description: "CNC machining with tight tolerances for automotive and aerospace components",
       image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop&q=80",
-      stats: { projects: "1000+", accuracy: "±0.01mm" },
+      stats: { projects: "18+", accuracy: "±0.01mm" },
       link: "/precision-machined"
     },
     {
@@ -39,7 +39,7 @@ const PortfolioSection = () => {
       category: "forging",
       description: "High-strength forged components for industrial and automotive applications",
       image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop&q=80",
-      stats: { projects: "750+", strength: "High" },
+      stats: { projects: "32+", "weight": "0.08 - 45 kg" },
       link: "/forgings"
     },
     {
@@ -48,7 +48,7 @@ const PortfolioSection = () => {
       category: "casting",
       description: "Ductile iron castings for pump parts, automotive, and general engineering",
       image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&auto=format&fit=crop&q=80",
-      stats: { projects: "600+", weight: "Up to 500kg" },
+      stats: { projects: "23+", weight: "Up to 420kg" },
       link: "/sg-ci-casting"
     },
     {
@@ -57,7 +57,7 @@ const PortfolioSection = () => {
       category: "casting",
       description: "Lightweight, high-volume aluminum pressure die castings",
       image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80",
-      stats: { projects: "800+", volume: "High Volume" },
+      stats: { projects: "12+", weight: "0.150 - 38 kg" },
       link: "/aluminum-die-casting"
     },
     {
@@ -66,7 +66,7 @@ const PortfolioSection = () => {
       category: "hardware",
       description: "Custom hardware manufacturing for diverse industrial applications",
       image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&auto=format&fit=crop&q=80",
-      stats: { projects: "1200+", variety: "Wide Range" },
+      stats: { projects: "13+", variety: "Wide Range" },
       link: "/hardware-components"
     }
   ];

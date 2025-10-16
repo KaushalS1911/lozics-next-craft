@@ -42,7 +42,7 @@ export const CTASection = () => {
             <div className="flex flex-col gap-3 text-primary-foreground/90">
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5" />
-                <span className="text-lg">+92 (8800) 87890</span>
+                <span className="text-lg">+91 9106697517</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5" />

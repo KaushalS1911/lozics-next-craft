@@ -42,21 +42,21 @@ const Certificates = () => {
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">IATF 16949</h3>
-                <p className="text-gray-700">
-                  Automotive quality management system standard for suppliers to the automotive industry.
-                </p>
-              </div>
+              {/*<div className="bg-white p-8 rounded-lg shadow-md text-center">*/}
+              {/*  <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />*/}
+              {/*  <h3 className="text-xl font-semibold mb-3">IATF 16949</h3>*/}
+              {/*  <p className="text-gray-700">*/}
+              {/*    Automotive quality management system standard for suppliers to the automotive industry.*/}
+              {/*  </p>*/}
+              {/*</div>*/}
 
-              <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">ISO 14001</h3>
-                <p className="text-gray-700">
-                  Environmental Management System certification demonstrating our commitment to sustainability.
-                </p>
-              </div>
+              {/*<div className="bg-white p-8 rounded-lg shadow-md text-center">*/}
+              {/*  <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />*/}
+              {/*  <h3 className="text-xl font-semibold mb-3">ISO 14001</h3>*/}
+              {/*  <p className="text-gray-700">*/}
+              {/*    Environmental Management System certification demonstrating our commitment to sustainability.*/}
+              {/*  </p>*/}
+              {/*</div>*/}
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg">

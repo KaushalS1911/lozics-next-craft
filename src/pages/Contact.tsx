@@ -101,12 +101,12 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+92 (8800) 87890"
+      content: "+91 9106697517"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "contact@noventraglobal.com"
+      content: "info@noventraglobal.com"
     },
     {
       icon: Clock,
@@ -446,7 +446,7 @@ const Contact = () => {
               {/* Map Overlay */}
               <div className="absolute top-6 right-6">
                 <a 
-                  href="https://maps.google.com/?q=Paramdham+Industrial+Estate+3,+Aji+Ring+Road,+Rajkot,+Gujarat+360003" 
+                  href="https://maps.app.goo.gl/LjZkMDV6wJvsnDcp7"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white hover:bg-gray-50 text-gray-900 px-6 py-3 rounded-lg flex items-center gap-2 transition-all shadow-lg hover:shadow-xl font-semibold"

@@ -4,12 +4,12 @@ const features = [
   {
     icon: CheckCircle2,
     title: "Reliable Service",
-    description: "On-time delivery guaranteed with our proven track record",
+    description: "On-time delivery and quick RFQ response guaranteed with our proven track record",
   },
   {
     icon: Award,
     title: "Industry Experts",
-    description: "Decades of experience in global logistics solutions",
+    description: "Decades of experience in global manufacturing excellence",
   },
   {
     icon: Users,
@@ -18,8 +18,8 @@ const features = [
   },
   {
     icon: Shield,
-    title: "Secure Transport",
-    description: "Advanced security measures for safe cargo handling",
+    title: "Quality Consistency",
+    description: "Maintaining uniform product quality through strict production standards",
   },
 ];
 
@@ -36,7 +36,7 @@ export const WhyChooseSection = () => {
             Why Choose Us
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Your Trusted Logistics Partner
+            Your Trusted Manufacturing Partner
           </h2>
           <p className="text-secondary-foreground/80 text-lg max-w-2xl mx-auto">
             Experience the difference with our commitment to excellence and customer satisfaction

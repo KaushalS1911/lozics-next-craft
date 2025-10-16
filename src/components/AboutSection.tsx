@@ -78,7 +78,7 @@ export const AboutSection = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-border">
-              <CounterAnimation end={85} label="Projects Completed" />
+              <CounterAnimation end={185} label="Projects Completed" />
               <CounterAnimation end={18} label="Global Clients" />
               <CounterAnimation end={3} label="Years of Excellence" />
             </div>

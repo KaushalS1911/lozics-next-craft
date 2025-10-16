@@ -202,7 +202,7 @@ const Process = () => {
   ];
 
   const processStats = [
-    { icon: <Factory className="w-8 h-8" />, value: "500+", label: "Projects Completed" },
+    { icon: <Factory className="w-8 h-8" />, value: "185+", label: "Projects Completed" },
     { icon: <Globe className="w-8 h-8" />, value: "50+", label: "Countries Served" },
     { icon: <Shield className="w-8 h-8" />, value: "99.8%", label: "Quality Rate" },
     { icon: <Clock className="w-8 h-8" />, value: "98%", label: "On-Time Delivery" },
@@ -335,18 +335,18 @@ const Process = () => {
                           <div className={`w-16 h-16 ${step.color} rounded-full flex items-center justify-center text-white mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                             <Icon className="w-8 h-8" />
                           </div>
-                          <div className="absolute -top-3 -right-3 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold shadow-lg">
-                            {step.id}
-                          </div>
+                          {/*<div className="absolute -top-3 -right-3 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold shadow-lg">*/}
+                          {/*  {step.id}*/}
+                          {/*</div>*/}
                           <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
                             {step.title.split(' ')[0]} {step.title.split(' ')[1]}
                           </h3>
                           <p className="text-sm text-gray-600 mb-3 line-clamp-2">
                             {step.description.substring(0, 80)}...
                           </p>
-                          <div className="text-xs text-primary font-semibold">
-                            {step.duration}
-                          </div>
+                          {/*<div className="text-xs text-primary font-semibold">*/}
+                          {/*  {step.duration}*/}
+                          {/*</div>*/}
                         </CardContent>
                       </Card>
                     </div>
@@ -421,10 +421,10 @@ const Process = () => {
                                 <CardTitle className="text-3xl text-gray-800 mb-2">
                                 Step {step.id}: {step.title}
                               </CardTitle>
-                                <div className="flex items-center gap-2">
-                                  <Clock className="w-4 h-4 text-gray-500" />
-                                  <span className="text-gray-600 font-medium">{step.duration}</span>
-                                </div>
+                                {/*<div className="flex items-center gap-2">*/}
+                                {/*  <Clock className="w-4 h-4 text-gray-500" />*/}
+                                {/*  <span className="text-gray-600 font-medium">{step.duration}</span>*/}
+                                {/*</div>*/}
                               </div>
                             </div>
                             <p className="text-gray-700 text-lg leading-relaxed">{step.description}</p>

@@ -65,7 +65,7 @@ export const Header = () => {
               {/*</div>*/}
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>+92 (8800) 87890</span>
+                <span>+91 9106697517</span>
               </div>
             </div>
             <div className="flex items-center gap-3">
