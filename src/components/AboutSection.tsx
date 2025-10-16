@@ -47,7 +47,7 @@ export const AboutSection = () => {
               className="rounded-lg shadow-2xl w-full"
             />
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-8 rounded-lg shadow-xl">
-              <div className="text-6xl font-bold">35</div>
+              <div className="text-6xl font-bold">3</div>
               <div className="text-sm mt-2">Years of Manufacturing<br />Excellence</div>
             </div>
           </div>
@@ -60,10 +60,7 @@ export const AboutSection = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               Your Trusted Manufacturing Partner
             </h2>
-            
-            <h3 className="text-2xl font-semibold mb-4 text-foreground">
-              World-Class Supply Chain Platform Since 1990
-            </h3>
+
             <p className="text-muted-foreground mb-6 text-lg">
               Noventra Global Sourcing is a leading provider of precision manufacturing solutions, specializing in investment casting, aluminum die casting, forgings, and precision machined components. With over three decades of manufacturing excellence, we deliver low-risk, cost-effective, and sustainable global supply chain solutions to our clients worldwide.
             </p>
@@ -81,9 +78,9 @@ export const AboutSection = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-border">
-              <CounterAnimation end={500} label="Projects Completed" />
-              <CounterAnimation end={100} label="Global Clients" />
-              <CounterAnimation end={35} label="Years of Excellence" />
+              <CounterAnimation end={85} label="Projects Completed" />
+              <CounterAnimation end={18} label="Global Clients" />
+              <CounterAnimation end={3} label="Years of Excellence" />
             </div>
           </div>
         </div>
