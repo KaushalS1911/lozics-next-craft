@@ -43,7 +43,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link to="/sg-ci-casting" className="text-secondary-foreground/70 hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">
-                  SG & CI Casting
+                  Sand Casting
                 </Link>
               </li>
               <li>
