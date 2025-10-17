@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import aboutImg from "@/assets/about-img.jpg";
+import aboutImg from "@/assets/get_to_know_us.jpeg";
 
 const CounterAnimation = ({ end, label }: { end: number; label: string }) => {
   const [count, setCount] = useState(0);

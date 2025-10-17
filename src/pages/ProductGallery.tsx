@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X, ZoomIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import heroBg from "../assets/hero-bg.jpg";
 
 // Import images dynamically using Vite's glob import with proper syntax
@@ -78,6 +79,7 @@ const sgciPumpPartsImages = import.meta.glob('/src/assets/Product Gallary/SG-CI 
 const sgciPumpPartsImageArray = Object.values(sgciPumpPartsImages) as string[];
 
 const ProductGallery = () => {
+  const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   // Combine all investment casting images
@@ -314,10 +316,20 @@ const ProductGallery = () => {
             Contact us to discuss your requirements and get a customized quote for your manufacturing needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="bg-white text-primary hover:bg-gray-100"
+              onClick={() => navigate('/contact')}
+            >
               Request Quote
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-primary"
+              onClick={() => navigate('/contact')}
+            >
               Contact Sales
             </Button>
           </div>

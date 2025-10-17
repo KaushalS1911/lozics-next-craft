@@ -119,6 +119,18 @@ const industries = [
         ),
         description: "Power generation and energy distribution"
     },
+    {
+        id: 13,
+        title: "Defence & Aerospace",
+        icon: (
+            <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                <circle cx="12" cy="12" r="2" />
+            </svg>
+        ),
+        description: "Military and aerospace component manufacturing"
+    },
 
   // {
   //   id: 2,

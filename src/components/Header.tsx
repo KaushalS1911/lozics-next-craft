@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MapPin, Phone, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
-import logo from "../assets/logo svg FINAL_122137.png";
+import logo from "../assets/Final Logo.png";
 
 export const Header = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
   const [openNestedSubmenu, setOpenNestedSubmenu] = useState<string | null>(null);
@@ -184,7 +185,11 @@ export const Header = () => {
 
             {/* Right Side Actions */}
             <div className="flex items-center gap-4">
-              <Button variant="default" className="hidden md:block bg-primary hover:bg-primary/90">
+              <Button 
+                variant="default" 
+                className="hidden md:block bg-primary hover:bg-primary/90"
+                onClick={() => navigate('/contact')}
+              >
                 Get a Quote
               </Button>
               <button
@@ -210,21 +215,13 @@ export const Header = () => {
                   About Us
                 </Link>
 
-                <Link to="/contact" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
-                  Contact Us
-                </Link>
-
-                <Link to="/product-gallery" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
-                  Product Gallery
-                </Link>
-
                 {/* What We Serve Mobile Submenu */}
                 <div>
                   <button
                     onClick={() => toggleMobileSubmenu('what-we-serve')}
                     className="flex items-center justify-between w-full text-gray-800 hover:text-primary transition-colors font-medium py-2"
                   >
-                    Services
+                    What we serve
                     <ChevronDown className={`h-4 w-4 transition-transform ${openMobileSubmenu === 'what-we-serve' ? 'rotate-180' : ''}`} />
                   </button>
                   {openMobileSubmenu === 'what-we-serve' && (
@@ -291,7 +288,21 @@ export const Header = () => {
                   )}
                 </div>
 
-                <Button variant="default" className="w-full bg-primary hover:bg-primary/90 mt-2">
+                <Link to="/product-gallery" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
+                  Product Gallery
+                </Link>
+
+                <Link to="/contact" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
+                  Contact Us
+                </Link>
+
+
+
+                <Button 
+                  variant="default" 
+                  className="w-full bg-primary hover:bg-primary/90 mt-2"
+                  onClick={() => navigate('/contact')}
+                >
                   Get a Quote
                 </Button>
               </div>

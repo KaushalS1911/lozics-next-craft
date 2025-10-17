@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 import { 
   CheckCircle, 
   ArrowRight, 
@@ -20,6 +21,8 @@ import {
 import sgciCastingBg from "../assets/what we serve/ci-castings-500x500.jpg";
 
 const SGCICasting = () => {
+  const navigate = useNavigate();
+  
   const processSteps = [
     {
       step: "01",
@@ -310,10 +313,20 @@ const SGCICasting = () => {
             Contact our foundry experts to discuss your SG iron or gray cast iron casting requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="bg-white text-primary hover:bg-gray-100"
+              onClick={() => navigate('/contact')}
+            >
               Request Quote <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-primary"
+              onClick={() => navigate('/contact')}
+            >
               Contact Us
             </Button>
           </div>

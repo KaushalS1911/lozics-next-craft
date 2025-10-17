@@ -1,8 +1,11 @@
 import { Button } from "./ui/button";
 import { Phone, Mail } from "lucide-react";
-import forkliftImg from "@/assets/forklift.png";
+import { useNavigate } from "react-router-dom";
+import forkliftImg from "@/assets/get_started.jpeg";
 
 export const CTASection = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="py-20 bg-primary relative overflow-hidden">
       {/* Background Pattern */}
@@ -26,6 +29,7 @@ export const CTASection = () => {
                 size="lg" 
                 variant="secondary"
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
+                onClick={() => navigate('/contact')}
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Call Us Now
@@ -34,6 +38,7 @@ export const CTASection = () => {
                 size="lg" 
                 variant="outline"
                 className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold"
+                onClick={() => navigate('/contact')}
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us

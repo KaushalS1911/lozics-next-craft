@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
+import ProductDevelopmentImg from '@/assets/product_development.avif';
+import FeasibilityOfStudyImg from '@/assets/feasibility_of_study.jpeg';
+import ManagementOfQualityImg from '@/assets/management_of_quality.jpeg';
 
 const ProcessSection = () => {
   const processSteps = [
@@ -17,7 +20,7 @@ const ProcessSection = () => {
         "Value Engineering",
         "Factory pre-qualification"
       ],
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=80",
+      image: FeasibilityOfStudyImg,
       gradient: "from-slate-700 to-slate-900"
     },
     {
@@ -43,7 +46,7 @@ const ProcessSection = () => {
         "Complete qualification prior to Sample submission",
         "Acceptance criteria frozen"
       ],
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+      image: ProductDevelopmentImg,
       gradient: "from-indigo-700 to-indigo-900"
     },
     {
@@ -55,7 +58,7 @@ const ProcessSection = () => {
         "Acceptance standards implemented at factory",
         "Final inspection with material testing"
       ],
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
+      image: ManagementOfQualityImg,
       gradient: "from-emerald-700 to-emerald-900"
     },
     {

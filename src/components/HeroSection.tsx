@@ -13,7 +13,7 @@ const slides = [
     image: slide1,
   },
   {
-    title: "Premium Forging Services",
+    title: "Premium Forging",
     subtitle: "High-strength forged components manufactured with advanced techniques for automotive and industrial applications.",
     image: slide2,
   },

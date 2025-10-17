@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 import { 
   CheckCircle, 
   ArrowRight, 
@@ -18,6 +19,8 @@ import {
 import investmentCastingBg from "../assets/what we serve/CS investment-casting.jpg";
 
 const InvestmentCasting = () => {
+  const navigate = useNavigate();
+  
   const processSteps = [
     {
       step: "01",
@@ -235,10 +238,20 @@ const InvestmentCasting = () => {
             Contact our experts to discuss your requirements and get a detailed quote for your investment casting needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="bg-white text-primary hover:bg-gray-100"
+              onClick={() => navigate('/contact')}
+            >
               Request Quote <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-primary"
+              onClick={() => navigate('/contact')}
+            >
               Contact Us
             </Button>
           </div>
