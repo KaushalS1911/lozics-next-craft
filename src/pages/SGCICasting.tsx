@@ -317,7 +317,10 @@ const SGCICasting = () => {
               size="lg" 
               variant="secondary" 
               className="bg-white text-primary hover:bg-gray-100"
-              onClick={() => navigate('/contact')}
+              onClick={() => {
+                navigate('/contact');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
             >
               Request Quote <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -325,7 +328,10 @@ const SGCICasting = () => {
               size="lg" 
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-primary"
-              onClick={() => navigate('/contact')}
+              onClick={() => {
+                navigate('/contact');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
             >
               Contact Us
             </Button>

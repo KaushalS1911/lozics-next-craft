@@ -199,7 +199,10 @@ export const IndustriesSection = () => {
           <p className="text-lg text-gray-600 mb-6">
             Don't see your industry? We're always expanding our expertise.
           </p>
-          <button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1" onClick={() => navigate("/contact")}>
+          <button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1" onClick={() => {
+            navigate("/contact");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}>
             Contact Us Today
           </button>
         </div>
