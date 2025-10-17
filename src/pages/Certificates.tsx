@@ -53,8 +53,8 @@ const Certificates = () => {
                 <p className="text-gray-700">Our official certifications and licenses</p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+              <div className="flex justify-center">
+                <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow max-w-md">
                   <h4 className="text-lg font-semibold mb-4 text-center">ISO 9001:2015</h4>
                   <p className="text-sm text-gray-600 text-center mb-4">Quality Management System</p>
                   <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
@@ -62,30 +62,6 @@ const Certificates = () => {
                       src={isoCertificate}
                       className="w-full h-full border-0"
                       title="ISO 9001:2015 Certificate"
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-                  <h4 className="text-lg font-semibold mb-4 text-center">Import Export License</h4>
-                  <p className="text-sm text-gray-600 text-center mb-4">International Trade License</p>
-                  <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
-                    <iframe 
-                      src={importExportCertificate}
-                      className="w-full h-full border-0"
-                      title="Import Export License"
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-                  <h4 className="text-lg font-semibold mb-4 text-center">MSME Certificate</h4>
-                  <p className="text-sm text-gray-600 text-center mb-4">Micro, Small & Medium Enterprise</p>
-                  <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
-                    <iframe 
-                      src={msmeCertificate}
-                      className="w-full h-full border-0"
-                      title="MSME Certificate"
                     />
                   </div>
                 </div>
