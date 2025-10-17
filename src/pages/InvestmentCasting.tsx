@@ -15,6 +15,7 @@ import {
   Settings,
   Gauge
 } from "lucide-react";
+import investmentCastingBg from "../assets/what we serve/CS investment-casting.jpg";
 
 const InvestmentCasting = () => {
   const processSteps = [
@@ -90,6 +91,12 @@ const InvestmentCasting = () => {
       
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${investmentCastingBg})`,
+          }}
+        ></div>
         <div className="absolute inset-0 glass-morphism-orange"></div>
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center">

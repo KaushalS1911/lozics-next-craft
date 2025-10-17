@@ -11,7 +11,9 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import SandCastingImg from '../assets/manufacturing excellence/sand_casting.jpeg'
+import ForgingImg from '../assets/manufacturing excellence/forging.jpeg'
 import InvestmentCastingImg from '../assets/manufacturing excellence/investment_casting.jpeg'
+import PrecisionMachiningImg from '../assets/manufacturing excellence/precision_machining.jpeg'
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -31,16 +33,16 @@ const PortfolioSection = () => {
       title: "Precision Machining",
       category: "machining",
       description: "CNC machining with tight tolerances for automotive and aerospace components",
-      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop&q=80",
+      image: PrecisionMachiningImg,
       stats: { projects: "18+", accuracy: "±0.01mm" },
       link: "/precision-machined"
     },
     {
       id: 3,
-      title: "Forging Solutions",
+      title: "Forging",
       category: "forging",
       description: "High-strength forged components for industrial and automotive applications",
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop&q=80",
+      image: ForgingImg,
       stats: { projects: "32+", "weight": "0.08 - 45 kg" },
       link: "/forgings"
     },
