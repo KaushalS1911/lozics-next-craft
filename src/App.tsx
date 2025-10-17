@@ -27,6 +27,9 @@ import MicrostructureAnalysis from "./pages/MicrostructureAnalysis";
 import SpectroAnalysis from "./pages/SpectroAnalysis";
 import CorrosionTesting from "./pages/CorrosionTesting";
 import SaltSprayTest from "./pages/SaltSprayTest";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import EmailPolicy from "./pages/EmailPolicy";
+import WebsiteDisclaimer from "./pages/WebsiteDisclaimer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -62,6 +65,9 @@ const App = () => (
           <Route path="/spectro-analysis" element={<SpectroAnalysis />} />
           <Route path="/corrosion-testing" element={<CorrosionTesting />} />
           <Route path="/salt-spray-test" element={<SaltSprayTest />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/email-policy" element={<EmailPolicy />} />
+          <Route path="/website-disclaimer" element={<WebsiteDisclaimer />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

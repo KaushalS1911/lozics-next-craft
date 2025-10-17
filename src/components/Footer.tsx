@@ -74,19 +74,19 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-secondary-foreground/70 hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">
+                <Link to="/privacy-policy" className="text-secondary-foreground/70 hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-secondary-foreground/70 hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">
-                  Website Disclaimer
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-secondary-foreground/70 hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">
+                <Link to="/email-policy" className="text-secondary-foreground/70 hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">
                   Email Policy
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/website-disclaimer" className="text-secondary-foreground/70 hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">
+                  Website Disclaimer
+                </Link>
               </li>
               {/*<li>*/}
               {/*  <a href="#" className="text-secondary-foreground/70 hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">*/}
