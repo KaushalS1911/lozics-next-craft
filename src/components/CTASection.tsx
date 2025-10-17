@@ -29,7 +29,10 @@ export const CTASection = () => {
                 size="lg" 
                 variant="secondary"
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
-                onClick={() => navigate('/contact')}
+                onClick={() => {
+                  navigate('/contact');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Call Us Now
@@ -38,7 +41,10 @@ export const CTASection = () => {
                 size="lg" 
                 variant="outline"
                 className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold"
-                onClick={() => navigate('/contact')}
+                onClick={() => {
+                  navigate('/contact');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us

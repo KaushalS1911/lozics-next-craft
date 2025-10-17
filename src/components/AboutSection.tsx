@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import aboutImg from "@/assets/get_to_know_us.jpeg";
+import {useNavigate} from "react-router-dom";
 
 const CounterAnimation = ({ end, label }: { end: number; label: string }) => {
   const [count, setCount] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const duration = 2000;
@@ -72,6 +74,7 @@ export const AboutSection = () => {
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-primary-foreground mt-6"
+              onClick={() => navigate('/product-gallery')}
             >
               Discover More
             </Button>

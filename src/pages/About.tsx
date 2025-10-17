@@ -310,7 +310,10 @@ const About = () => {
                   variant="secondary" 
                   size="lg" 
                   className="bg-white text-primary hover:bg-white/90"
-                  onClick={() => navigate('/contact')}
+                  onClick={() => {
+                    navigate('/contact');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
                 >
                   Get a Quote
                 </Button>
@@ -318,7 +321,10 @@ const About = () => {
                   variant="outline" 
                   size="lg" 
                   className="border-2 border-white text-white hover:bg-white hover:text-primary"
-                  onClick={() => navigate('/contact')}
+                  onClick={() => {
+                    navigate('/contact');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
                 >
                   Contact Us
                 </Button>

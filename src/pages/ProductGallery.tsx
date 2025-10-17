@@ -320,7 +320,10 @@ const ProductGallery = () => {
               size="lg" 
               variant="secondary" 
               className="bg-white text-primary hover:bg-gray-100"
-              onClick={() => navigate('/contact')}
+              onClick={() => {
+                navigate('/contact');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
             >
               Request Quote
             </Button>
@@ -328,7 +331,10 @@ const ProductGallery = () => {
               size="lg" 
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-primary"
-              onClick={() => navigate('/contact')}
+              onClick={() => {
+                navigate('/contact');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
             >
               Contact Sales
             </Button>

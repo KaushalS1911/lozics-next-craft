@@ -188,7 +188,10 @@ export const Header = () => {
               <Button 
                 variant="default" 
                 className="hidden md:block bg-primary hover:bg-primary/90"
-                onClick={() => navigate('/contact')}
+                onClick={() => {
+                  navigate('/contact');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
               >
                 Get a Quote
               </Button>
@@ -301,7 +304,10 @@ export const Header = () => {
                 <Button 
                   variant="default" 
                   className="w-full bg-primary hover:bg-primary/90 mt-2"
-                  onClick={() => navigate('/contact')}
+                  onClick={() => {
+                    navigate('/contact');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
                 >
                   Get a Quote
                 </Button>
