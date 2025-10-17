@@ -14,6 +14,8 @@ import SandCastingImg from '../assets/manufacturing excellence/sand_casting.jpeg
 import ForgingImg from '../assets/manufacturing excellence/forging.jpeg'
 import InvestmentCastingImg from '../assets/manufacturing excellence/investment_casting.jpeg'
 import PrecisionMachiningImg from '../assets/manufacturing excellence/precision_machining.jpeg'
+import AluminiumCastingImg from '../assets/manufacturing excellence/aluminium_die_casting.jpeg'
+import HardwareImg from '../assets/manufacturing excellence/hardware.jpeg'
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -60,7 +62,7 @@ const PortfolioSection = () => {
       title: "Aluminum Die Casting",
       category: "casting",
       description: "Lightweight, high-volume aluminum pressure die castings",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80",
+      image: AluminiumCastingImg,
       stats: { projects: "12+", weight: "0.150 - 38 kg" },
       link: "/aluminum-die-casting"
     },
@@ -69,7 +71,7 @@ const PortfolioSection = () => {
       title: "Hardware Components",
       category: "hardware",
       description: "Custom hardware manufacturing for diverse industrial applications",
-      image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&auto=format&fit=crop&q=80",
+      image: HardwareImg,
       stats: { projects: "13+", variety: "Wide Range" },
       link: "/hardware-components"
     }
