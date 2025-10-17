@@ -17,6 +17,7 @@ import {
   Layers,
   Thermometer
 } from "lucide-react";
+import sgciCastingBg from "../assets/what we serve/ci-castings-500x500.jpg";
 
 const SGCICasting = () => {
   const processSteps = [
@@ -105,6 +106,12 @@ const SGCICasting = () => {
       
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${sgciCastingBg})`,
+          }}
+        ></div>
         <div className="absolute inset-0 glass-morphism-orange"></div>
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center">
@@ -112,7 +119,7 @@ const SGCICasting = () => {
               Sand Casting Solutions
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
-              SG/CI Casting
+              Sand Casting
             </h1>
             <p className="text-xl lg:text-2xl text-white/95 mb-8 leading-relaxed drop-shadow-md">
               Expert sand casting services for Spheroidal Graphite Iron and Gray Cast Iron components. 
@@ -134,7 +141,7 @@ const SGCICasting = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">SG/CI Casting Process</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Sand Casting Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our sand casting process combines traditional foundry expertise with modern quality control 
               to produce reliable SG iron and gray cast iron components.
@@ -216,7 +223,7 @@ const SGCICasting = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose SG/CI Casting?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Choose Sand Casting?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Sand casting offers unique advantages for medium to large components 
               that require reliable mechanical properties and cost-effective production.
@@ -244,7 +251,7 @@ const SGCICasting = () => {
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">Applications & Industries</h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                SG/CI casting is widely used across industries that require durable, 
+                Sand casting is widely used across industries that require durable, 
                 reliable components with excellent mechanical properties and cost-effectiveness.
               </p>
               <div className="grid grid-cols-1 gap-3">
@@ -297,7 +304,7 @@ const SGCICasting = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Ready to Start Your SG/CI Casting Project?
+            Ready to Start Your Sand Casting Project?
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Contact our foundry experts to discuss your SG iron or gray cast iron casting requirements.

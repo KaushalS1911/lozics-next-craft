@@ -10,6 +10,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
+import SandCastingImg from '../assets/manufacturing excellence/sand_casting.jpeg'
+import InvestmentCastingImg from '../assets/manufacturing excellence/investment_casting.jpeg'
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -20,7 +22,7 @@ const PortfolioSection = () => {
       title: "Investment Casting",
       category: "casting",
       description: "Precision investment casting for complex geometries and superior surface finish",
-      image: "https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=800&auto=format&fit=crop&q=80",
+      image: InvestmentCastingImg,
       stats: { projects: "35+", accuracy: "±0.01mm" },
       link: "/investment-casting"
     },
@@ -44,10 +46,10 @@ const PortfolioSection = () => {
     },
     {
       id: 4,
-      title: "SG-CI Sand Casting",
+      title: "Sand Casting",
       category: "casting",
       description: "Ductile iron castings for pump parts, automotive, and general engineering",
-      image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&auto=format&fit=crop&q=80",
+      image: SandCastingImg,
       stats: { projects: "23+", weight: "Up to 420kg" },
       link: "/sg-ci-casting"
     },

@@ -106,7 +106,7 @@ export const Footer = () => {
                 <div className="text-secondary-foreground/70">
                   <p className="font-semibold mb-1 text-white">Address</p>
                   <p>RS No. 236 P 3, Plot No. 21/1, 22/1</p>
-                  <p>Paramdham Industrial Estate - 3, Aji Ring Road, Near Murlidhar Kanta</p>
+                  <p>Paramdham Industrial Estate - 3, Aji Ring Road, Near Murlidhar Weigh Bridge</p>
                   <p>Rajkot, Gujarat, India - 360003 </p>
                 </div>
               </li>

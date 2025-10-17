@@ -8,8 +8,8 @@ import slide5 from "@/assets/Home page Slides/5. laser-cutting.jpg";
 
 const slides = [
   {
-    title: "Investment Casting Excellence",
-    subtitle: "Precision investment casting solutions for complex geometries and superior surface finishes across industries.",
+    title: "Casting Excellence",
+    subtitle: "Precision investment casting, Sand Casting, Shell Moulding, HPDC for complex geometries and superior surface finishes across industries.",
     image: slide1,
   },
   {

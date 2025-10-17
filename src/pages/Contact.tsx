@@ -96,7 +96,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      content: "Floor No.: RS No. 236 P 3, Plot No. 21/1, 22/1, Paramdham Industrial Estate - 3, Aji Ring Road, Near Murlidhar Kanta, Rajkot, Gujarat - 360003"
+      content: "Floor No.: RS No. 236 P 3, Plot No. 21/1, 22/1, Paramdham Industrial Estate - 3, Aji Ring Road, Near Murlidhar Weigh Bridge, Rajkot, Gujarat - 360003"
     },
     {
       icon: Phone,
@@ -446,7 +446,7 @@ const Contact = () => {
               {/* Map Overlay */}
               <div className="absolute top-6 right-6">
                 <a 
-                  href="https://maps.app.goo.gl/LjZkMDV6wJvsnDcp7"
+                  href="https://www.google.com/maps/dir//22.26062,70.829659/@22.2605992,70.7472574,12z?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white hover:bg-gray-50 text-gray-900 px-6 py-3 rounded-lg flex items-center gap-2 transition-all shadow-lg hover:shadow-xl font-semibold"

@@ -247,7 +247,7 @@ const createUserConfirmationTemplate = (name) => {
           <h3 style="color: #1e3a8a; margin-top: 0;">📞 Contact Information</h3>
           <p style="margin: 5px 0;"><strong>Phone:</strong> +91 9106697517</p>
           <p style="margin: 5px 0;"><strong>Email:</strong> contact@noventraglobal.com</p>
-          <p style="margin: 5px 0;"><strong>Address:</strong> Floor No.: RS No. 236 P 3, Plot No. 21/1, 22/1, Paramdham Industrial Estate - 3, Aji Ring Road, Near Murlidhar Kanta, Rajkot, Gujarat - 360003</p>
+          <p style="margin: 5px 0;"><strong>Address:</strong> Floor No.: RS No. 236 P 3, Plot No. 21/1, 22/1, Paramdham Industrial Estate - 3, Aji Ring Road, Near Murlidhar Weigh Bridge, Rajkot, Gujarat - 360003</p>
         </div>
         
         <p style="font-size: 16px; margin-bottom: 0;">

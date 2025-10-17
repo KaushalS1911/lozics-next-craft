@@ -339,7 +339,7 @@ const Process = () => {
                           {/*  {step.id}*/}
                           {/*</div>*/}
                           <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-                            {step.title.split(' ')[0]} {step.title.split(' ')[1]}
+                            {step.title}
                           </h3>
                           <p className="text-sm text-gray-600 mb-3 line-clamp-2">
                             {step.description.substring(0, 80)}...

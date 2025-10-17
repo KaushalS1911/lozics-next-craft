@@ -119,7 +119,7 @@ const ProductGallery = () => {
     },
     {
       id: "sgci-casting",
-      name: "SG-CI Casting",
+      name: "Sand Casting",
       description: "Ductile iron castings for automotive, pumps, gearboxes, and general engineering applications",
       images: allSGCIImages,
       count: allSGCIImages.length

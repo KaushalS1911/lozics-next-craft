@@ -247,7 +247,7 @@ const DTTesting = () => {
                       <td className="p-3 border">Per lot</td>
                     </tr>
                     <tr className="bg-gray-50">
-                      <td className="p-3 border">Cast Iron (SG/CI)</td>
+                      <td className="p-3 border">Cast Iron (Sand)</td>
                       <td className="p-3 border">✓ Required</td>
                       <td className="p-3 border">- Not typical</td>
                       <td className="p-3 border">✓ Required</td>

@@ -11,7 +11,7 @@ export const Header = () => {
 
   const whatWeServeItems = [
     { title: "Investment Casting", href: "/investment-casting" },
-    { title: "SG/CI Casting", href: "/sg-ci-casting" },
+    { title: "Sand Casting", href: "/sg-ci-casting" },
     { title: "Forgings", href: "/forgings" },
     { title: "Precision Machined Components", href: "/precision-machined" },
     { title: "Aluminum Die Castings", href: "/aluminum-die-casting" },
@@ -101,6 +101,12 @@ export const Header = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-6">
+
+              <Link to="/" className="text-gray-800 hover:text-primary transition-colors font-medium">
+                Home
+              </Link>
+
+
               <Link to="/about" className="text-gray-800 hover:text-primary transition-colors font-medium">
                 About Us
               </Link>
@@ -196,6 +202,10 @@ export const Header = () => {
               <div className="flex flex-col gap-2">
 
                 
+                <Link to="/" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
+                  Home
+                </Link>
+
                 <Link to="/about" className="text-gray-800 hover:text-primary transition-colors font-medium py-2">
                   About Us
                 </Link>
