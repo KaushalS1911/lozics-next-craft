@@ -7,7 +7,7 @@ export const API_CONFIG = {
   // Base URL for API
   baseURL: isDevelopment 
     ? 'http://localhost:5000'
-    : import.meta.env.VITE_API_URL || 'https://your-render-backend-url.onrender.com',
+    : import.meta.env.VITE_API_URL || 'https://noventra.onrender.com',
   
   // API Endpoints
   endpoints: {
