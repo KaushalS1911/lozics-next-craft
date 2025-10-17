@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Search, HandHeart, Settings, CheckCircle, Truck, ArrowRight, Check, Star, Clock, Users, Shield, Zap, Factory, Wrench, Target, Globe, Award, FileText, BarChart3, Cog, Package, QualityCheck } from "lucide-react";
+import { Search, HandHeart, Settings, CheckCircle, Truck, ArrowRight, Check, Star, Clock, Users, Shield, Zap, Factory, Wrench, Target, Globe, Award, FileText, BarChart3, Cog, Package } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
