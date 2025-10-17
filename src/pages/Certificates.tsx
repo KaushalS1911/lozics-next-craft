@@ -1,6 +1,9 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Award, CheckCircle, FileCheck } from "lucide-react";
+import isoCertificate from "../assets/certificates/ISO.pdf";
+import importExportCertificate from "../assets/certificates/ImportExport.pdf";
+import msmeCertificate from "../assets/certificates/MSME.pdf";
 
 const Certificates = () => {
   return (
@@ -33,64 +36,63 @@ const Certificates = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="bg-white p-8 rounded-lg shadow-md text-center">
+            <div className="flex justify-center mb-16">
+              <div className="bg-white p-8 rounded-lg shadow-md text-center max-w-md">
                 <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-3">ISO 9001:2015</h3>
                 <p className="text-gray-700">
                   Quality Management System certification ensuring consistent product quality and customer satisfaction.
                 </p>
               </div>
-
-              {/*<div className="bg-white p-8 rounded-lg shadow-md text-center">*/}
-              {/*  <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />*/}
-              {/*  <h3 className="text-xl font-semibold mb-3">IATF 16949</h3>*/}
-              {/*  <p className="text-gray-700">*/}
-              {/*    Automotive quality management system standard for suppliers to the automotive industry.*/}
-              {/*  </p>*/}
-              {/*</div>*/}
-
-              {/*<div className="bg-white p-8 rounded-lg shadow-md text-center">*/}
-              {/*  <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />*/}
-              {/*  <h3 className="text-xl font-semibold mb-3">ISO 14001</h3>*/}
-              {/*  <p className="text-gray-700">*/}
-              {/*    Environmental Management System certification demonstrating our commitment to sustainability.*/}
-              {/*  </p>*/}
-              {/*</div>*/}
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg">
+            <div className="bg-gray-50 p-8 rounded-lg max-w-6xl mx-auto">
               <div className="text-center mb-8">
                 <FileCheck className="w-16 h-16 text-primary mx-auto mb-4" />
                 <h3 className="text-2xl font-semibold mb-2">Certificates Gallery</h3>
-                <p className="text-gray-700">Detailed certificates will be available here soon</p>
+                <p className="text-gray-700">Our official certifications and licenses</p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-lg shadow border-2 border-dashed border-gray-300">
-                  <div className="aspect-[4/3] bg-gray-100 rounded flex items-center justify-center">
-                    <p className="text-gray-400 text-sm">Certificate Image</p>
+                <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                  <h4 className="text-lg font-semibold mb-4 text-center">ISO 9001:2015</h4>
+                  <p className="text-sm text-gray-600 text-center mb-4">Quality Management System</p>
+                  <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
+                    <iframe 
+                      src={isoCertificate}
+                      className="w-full h-full border-0"
+                      title="ISO 9001:2015 Certificate"
+                    />
                   </div>
-                  <p className="mt-3 text-center font-semibold text-gray-600">Coming Soon</p>
                 </div>
 
-                <div className="bg-white p-6 rounded-lg shadow border-2 border-dashed border-gray-300">
-                  <div className="aspect-[4/3] bg-gray-100 rounded flex items-center justify-center">
-                    <p className="text-gray-400 text-sm">Certificate Image</p>
+                <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                  <h4 className="text-lg font-semibold mb-4 text-center">Import Export License</h4>
+                  <p className="text-sm text-gray-600 text-center mb-4">International Trade License</p>
+                  <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
+                    <iframe 
+                      src={importExportCertificate}
+                      className="w-full h-full border-0"
+                      title="Import Export License"
+                    />
                   </div>
-                  <p className="mt-3 text-center font-semibold text-gray-600">Coming Soon</p>
                 </div>
 
-                <div className="bg-white p-6 rounded-lg shadow border-2 border-dashed border-gray-300">
-                  <div className="aspect-[4/3] bg-gray-100 rounded flex items-center justify-center">
-                    <p className="text-gray-400 text-sm">Certificate Image</p>
+                <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                  <h4 className="text-lg font-semibold mb-4 text-center">MSME Certificate</h4>
+                  <p className="text-sm text-gray-600 text-center mb-4">Micro, Small & Medium Enterprise</p>
+                  <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
+                    <iframe 
+                      src={msmeCertificate}
+                      className="w-full h-full border-0"
+                      title="MSME Certificate"
+                    />
                   </div>
-                  <p className="mt-3 text-center font-semibold text-gray-600">Coming Soon</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-16">
+            <div className="mt-16 max-w-6xl mx-auto">
               <h3 className="text-2xl font-semibold mb-6 text-center">Our Quality Commitment</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-primary/5 p-6 rounded-lg">
