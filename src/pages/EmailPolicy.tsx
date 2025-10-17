@@ -205,7 +205,7 @@ const EmailPolicy = () => {
                     If you have any questions about our email practices or want to update your preferences:
                   </p>
                   <div className="space-y-2 text-gray-700">
-                    <p><strong>Email:</strong> info@noventraglobal.com</p>
+                    <p><strong>Email:</strong> info@noventrasourcing.com</p>
                     <p><strong>Phone:</strong> +91 9106697517</p>
                     <p><strong>Address:</strong> 21/1, 22/1 Paramdham Industrial Estate - 3, Aji Ring Road, Rajkot, India</p>
                   </div>

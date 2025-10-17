@@ -106,7 +106,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@noventraglobal.com"
+      content: "info@noventrasourcing.com"
     },
     {
       icon: Clock,

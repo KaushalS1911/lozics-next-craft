@@ -51,7 +51,7 @@ export const CTASection = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5" />
-                <span className="text-lg">info@noventraglobal.com</span>
+                <span className="text-lg">info@noventrasourcing.com</span>
               </div>
             </div>
           </div>

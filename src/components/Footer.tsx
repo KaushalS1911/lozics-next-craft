@@ -115,8 +115,8 @@ export const Footer = () => {
                 <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div className="text-secondary-foreground/70">
                   <p className="font-semibold mb-1 text-white">Email</p>
-                  <a href="mailto:info@noventraglobal.com" className="hover:text-primary transition-colors">
-                    info@noventraglobal.com
+                  <a href="mailto:info@noventrasourcing.com" className="hover:text-primary transition-colors">
+                    info@noventrasourcing.com
                   </a>
                 </div>
               </li>
