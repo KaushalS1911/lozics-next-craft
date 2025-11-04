@@ -184,10 +184,24 @@ const AluminumDieCasting = () => {
               Complex geometries, thin walls, and superior surface finish with excellent cost-effectiveness.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
+              <Button 
+                size="lg"
+                onClick={() => {
+                  navigate('/contact');
+                  window.scrollTo({ top: 0, behavior: 'instant' });
+                }}
+              >
                 Get Quote <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white text-white hover:bg-white hover:text-primary"
+                onClick={() => {
+                  navigate('/product-gallery#pressure-die-casting');
+                  window.scrollTo({ top: 0, behavior: 'instant' });
+                }}
+              >
                 Learn More
               </Button>
             </div>

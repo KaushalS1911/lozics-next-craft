@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X, ZoomIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import heroBg from "../assets/hero-bg.jpg";
 
 // Import images dynamically using Vite's glob import with proper syntax
@@ -80,7 +80,9 @@ const sgciPumpPartsImageArray = Object.values(sgciPumpPartsImages) as string[];
 
 const ProductGallery = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<string>("investment-casting");
 
   // Combine all investment casting images
   const allInvestmentCastingImages = [
@@ -151,6 +153,14 @@ const ProductGallery = () => {
 
 
   ];
+
+  // Set active tab based on URL hash
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+    if (hash && categories.some(cat => cat.id === hash)) {
+      setActiveTab(hash);
+    }
+  }, [location.hash, categories]);
 
   // Helper function to extract and format filename from image path
   const formatImageName = (imagePath: string): string => {
@@ -251,7 +261,7 @@ const ProductGallery = () => {
       {/* Gallery Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <Tabs defaultValue={categories[0].id} className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="w-full flex-wrap h-auto justify-start gap-2 bg-white p-2 rounded-lg shadow-sm mb-8">
               {categories.map((category) => (
                 <TabsTrigger

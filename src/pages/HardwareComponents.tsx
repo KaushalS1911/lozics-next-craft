@@ -191,10 +191,24 @@ const HardwareComponents = () => {
               Fasteners, brackets, hinges, and custom components with superior quality and reliability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
+              <Button 
+                size="lg"
+                onClick={() => {
+                  navigate('/contact');
+                  window.scrollTo({ top: 0, behavior: 'instant' });
+                }}
+              >
                 Get Quote <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white text-white hover:bg-white hover:text-primary"
+                onClick={() => {
+                  navigate('/product-gallery#hardware');
+                  window.scrollTo({ top: 0, behavior: 'instant' });
+                }}
+              >
                 Learn More
               </Button>
             </div>

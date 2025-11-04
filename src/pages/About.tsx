@@ -3,7 +3,6 @@ import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { useNavigate } from "react-router-dom";
 import { 
   Award, 
   Users, 
@@ -17,11 +16,9 @@ import {
   Zap,
   Truck
 } from "lucide-react";
-import heroBg from "../assets/Final Logo.png";
+import heroBg from "../assets/logo.png";
 
 const About = () => {
-  const navigate = useNavigate();
-  
   const stats = [
     { icon: <Users className="w-8 h-8" />, value: "Global", label: "Supply Chain Network" },
     { icon: <Globe className="w-8 h-8" />, value: "Worldwide", label: "Market Presence" },
@@ -92,7 +89,7 @@ const About = () => {
         <section className="relative py-20 text-white overflow-hidden">
           {/* Background Image */}
           <div 
-            className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${heroBg})` }}
           ></div>
           
@@ -155,8 +152,8 @@ const About = () => {
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 h-96 flex items-center justify-center">
-                    <Factory className="w-32 h-32 text-primary/30" />
+                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 min-h-96 flex items-center justify-center">
+                    <img src={heroBg} alt="Noventra Global Sourcing Logo" className="w-full max-w-2xl h-auto object-contain" />
                   </div>
                   <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary rounded-full flex items-center justify-center">
                     <span className="text-2xl font-bold text-white">2023</span>
@@ -310,10 +307,6 @@ const About = () => {
                   variant="secondary" 
                   size="lg" 
                   className="bg-white text-primary hover:bg-white/90"
-                  onClick={() => {
-                    navigate('/contact');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
                 >
                   Get a Quote
                 </Button>
@@ -321,10 +314,6 @@ const About = () => {
                   variant="outline" 
                   size="lg" 
                   className="border-2 border-white text-white hover:bg-white hover:text-primary"
-                  onClick={() => {
-                    navigate('/contact');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
                 >
                   Contact Us
                 </Button>

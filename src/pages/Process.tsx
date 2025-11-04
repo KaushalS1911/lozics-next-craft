@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import precisionMachining from "../assets/Home page Slides/3. precision_machining.jpg";
+import {useNavigate} from "react-router-dom";
 
 const Process = () => {
   // Enhanced process steps with detailed information
@@ -216,6 +217,8 @@ const Process = () => {
   const processAnimation = useScrollAnimation(0.1);
   const benefitsAnimation = useScrollAnimation(0.2);
   const statsAnimation = useScrollAnimation(0.1);
+
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen">
@@ -614,6 +617,7 @@ const Process = () => {
                   <Button 
                     size="lg" 
                     className="bg-white text-primary hover:bg-white/90 px-10 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
+                    onClick={() => navigate("/contact")}
                   >
                     <FileText className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                     Get a Detailed Quote
@@ -622,6 +626,7 @@ const Process = () => {
                     variant="outline" 
                     size="lg" 
                     className="border-2 border-white text-white hover:bg-white hover:text-primary px-10 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
+                    onClick={() => navigate("/contact")}
                   >
                     <Users className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
                     Schedule Consultation
