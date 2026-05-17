@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Mail } from "lucide-react";
+import { MapPin, Mail, Building2 } from "lucide-react";
 import logo from "../assets/Final Logo.png";
 
 export const Footer = () => {
@@ -25,6 +25,18 @@ export const Footer = () => {
               Leading provider of precision manufacturing parts including investment casting,
               aluminum die casting, shell moulding, forgings, and precision machined components
             </p>
+            <a
+              href="https://www.linkedin.com/company/noventraglobalsourcing/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Noventra Global Sourcing on LinkedIn"
+              className="inline-flex items-center gap-2 mt-4 text-secondary-foreground/70 hover:text-primary transition-colors"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
           </div>
 
           {/* What We Serve (Admin) */}
@@ -100,14 +112,25 @@ export const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-6 text-white">Company Details</h3>
             <ul className="space-y-4">
-              {/* Address */}
+              {/* Rajkot Address */}
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div className="text-secondary-foreground/70">
-                  <p className="font-semibold mb-1 text-white">Address</p>
-                  <p>RS No. 236 P 3, Plot No. 21/1, 22/1</p>
-                  <p>Paramdham Industrial Estate - 3, Aji Ring Road, Near Murlidhar Weigh Bridge</p>
-                  <p>Rajkot, Gujarat, India - 360003 </p>
+                  <p className="font-semibold mb-1 text-white">Rajkot Facility</p>
+                  <p>22/1, Paramdham Industrial Estate - 3, Aji Ring Road, Rajkot, Gujarat, India</p>
+                </div>
+              </li>
+              {/* Germany Office */}
+              <li className="flex items-start gap-3">
+                <Building2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <div className="text-secondary-foreground/70">
+                  <p className="font-semibold mb-1 text-white">Germany Corporate Office</p>
+                  <p>Ulmenweg 11, 88046 Friedrichshafen</p>
+                  <p>
+                    <a href="tel:+4915901475825" className="hover:text-primary transition-colors">
+                      +49 159 01475825
+                    </a>
+                  </p>
                 </div>
               </li>
               {/* Email */}
@@ -115,9 +138,28 @@ export const Footer = () => {
                 <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div className="text-secondary-foreground/70">
                   <p className="font-semibold mb-1 text-white">Email</p>
-                  <a href="mailto:info@noventrasourcing.com" className="hover:text-primary transition-colors">
-                    info@noventrasourcing.com
-                  </a>
+                  <div className="space-y-1">
+                    <p>
+                      <a href="mailto:info@noventrasourcing.com" className="hover:text-primary transition-colors break-all">
+                        info@noventrasourcing.com
+                      </a>
+                    </p>
+                    <p>
+                      <a href="mailto:sales@noventrasourcing.com" className="hover:text-primary transition-colors break-all">
+                        sales@noventrasourcing.com
+                      </a>
+                    </p>
+                    <p>
+                      <a href="mailto:raxitrola@noventrasourcing.com" className="hover:text-primary transition-colors break-all">
+                        raxitrola@noventrasourcing.com
+                      </a>
+                    </p>
+                    <p>
+                      <a href="mailto:noventrasourcing@gmail.com" className="hover:text-primary transition-colors break-all">
+                        noventrasourcing@gmail.com
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </li>
             </ul>

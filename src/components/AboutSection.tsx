@@ -51,8 +51,8 @@ export const AboutSection = () => {
               className="rounded-lg shadow-2xl w-full"
             />
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-8 rounded-lg shadow-xl">
-              <div className="text-6xl font-bold">3</div>
-              <div className="text-sm mt-2">Years of Manufacturing<br />Excellence</div>
+              <div className="text-6xl font-bold">18</div>
+              <div className="text-sm mt-2">Years of<br />Experience</div>
             </div>
           </div>
 
@@ -66,7 +66,7 @@ export const AboutSection = () => {
             </h2>
 
             <p className="text-muted-foreground mb-6 text-lg">
-              Noventra Global Sourcing is a leading provider of precision manufacturing solutions, specializing in investment casting, aluminum die casting, forgings, and precision machined components. With over three decades of manufacturing excellence, we deliver low-risk, cost-effective, and sustainable global supply chain solutions to our clients worldwide.
+              Noventra Global Sourcing is a leading provider of precision manufacturing solutions, specializing in investment casting, aluminum die casting, forgings, and precision machined components. With over 18 years of manufacturing excellence, we deliver low-risk, cost-effective, and sustainable global supply chain solutions to our clients worldwide.
             </p>
 
             <h3 className="text-2xl font-semibold mb-4 text-foreground">
@@ -83,9 +83,9 @@ export const AboutSection = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-border">
-              <CounterAnimation end={185} label="Projects Completed" />
-              <CounterAnimation end={18} label="Global Clients" />
-              <CounterAnimation end={3} label="Years of Excellence" />
+              <CounterAnimation end={90} label="Projects Completed" />
+              <CounterAnimation end={7} label="Countries Served" />
+              <CounterAnimation end={18} label="Years of Experience" />
             </div>
           </div>
         </div>

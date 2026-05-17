@@ -95,24 +95,77 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Address",
-      content: "Floor No.: RS No. 236 P 3, Plot No. 21/1, 22/1, Paramdham Industrial Estate - 3, Aji Ring Road, Near Murlidhar Weigh Bridge, Rajkot, Gujarat - 360003"
+      title: "Rajkot Facility",
+      content: "22/1, Paramdham Industrial Estate - 3, Aji Ring Road, Rajkot, Gujarat, India",
+    },
+    {
+      icon: Building2,
+      title: "Germany Corporate Office",
+      content: (
+        <div className="space-y-2">
+          <p>Ulmenweg 11, 88046 Friedrichshafen</p>
+          <p>
+            <a href="tel:+4915901475825" className="hover:text-primary transition-colors">
+              +49 159 01475825
+            </a>
+          </p>
+        </div>
+      ),
     },
     {
       icon: Phone,
-      title: "Phone",
-      content: "+91 9106697517"
+      title: "Phone (India)",
+      content: (
+        <a href="tel:+919106697517" className="hover:text-primary transition-colors">
+          +91 9106697517
+        </a>
+      ),
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@noventrasourcing.com"
+      content: (
+        <div className="space-y-2">
+          <p>
+            <a
+              href="mailto:info@noventrasourcing.com"
+              className="hover:text-primary transition-colors break-all"
+            >
+              info@noventrasourcing.com
+            </a>
+          </p>
+          <p>
+            <a
+              href="mailto:sales@noventrasourcing.com"
+              className="hover:text-primary transition-colors break-all"
+            >
+              sales@noventrasourcing.com
+            </a>
+          </p>
+          <p>
+            <a
+              href="mailto:raxitrola@noventrasourcing.com"
+              className="hover:text-primary transition-colors break-all"
+            >
+              raxitrola@noventrasourcing.com
+            </a>
+          </p>
+          <p>
+            <a
+              href="mailto:noventrasourcing@gmail.com"
+              className="hover:text-primary transition-colors break-all"
+            >
+              noventrasourcing@gmail.com
+            </a>
+          </p>
+        </div>
+      ),
     },
     {
       icon: Clock,
       title: "Business Hours",
-      content: "Monday - Saturday: 8:00 AM - 6:00 PM"
-    }
+      content: "Monday - Saturday: 8:00 AM - 6:00 PM",
+    },
   ];
 
   return (
@@ -363,9 +416,9 @@ const Contact = () => {
                             <h3 className="text-lg font-bold text-gray-900 mb-2">
                               {info.title}
                             </h3>
-                            <p className="text-gray-600 leading-relaxed">
+                            <div className="text-gray-600 leading-relaxed">
                               {info.content}
-                            </p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -401,10 +454,13 @@ const Contact = () => {
                         </svg>
                       </a>
                       <a 
-                        href="#" 
+                        href="https://www.linkedin.com/company/noventraglobalsourcing/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Noventra Global Sourcing on LinkedIn"
                         className="w-12 h-12 bg-primary hover:bg-primary/90 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:scale-110 shadow-md hover:shadow-lg"
                       >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
                           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
                       </a>
@@ -432,21 +488,21 @@ const Contact = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <div className="w-full h-[500px]">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.234567890123!2d70.8022!3d22.3039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin&q=Paramdham+Industrial+Estate+3,+Aji+Ring+Road,+Rajkot,+Gujarat+360003"
+                      src="https://maps.google.com/maps?q=22.2606209,70.8295314&hl=en&z=17&output=embed"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                  title="NOVENTRA GLOBAL SOURCING Manufacturing Location"
+                      title="Noventra Sourcing - Rajkot Facility"
                     ></iframe>
               </div>
 
               {/* Map Overlay */}
               <div className="absolute top-6 right-6">
                 <a 
-                  href="https://www.google.com/maps/dir//22.26062,70.829659/@22.2605992,70.7472574,12z?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+                  href="https://maps.app.goo.gl/99PQhAT7GCFthpxE7"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white hover:bg-gray-50 text-gray-900 px-6 py-3 rounded-lg flex items-center gap-2 transition-all shadow-lg hover:shadow-xl font-semibold"

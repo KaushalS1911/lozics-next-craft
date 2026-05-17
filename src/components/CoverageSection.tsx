@@ -29,7 +29,7 @@ export const CoverageSection = () => {
             
             {/* Experience Badge */}
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-8 rounded-lg shadow-2xl animate-bounce-slow">
-              <div className="text-5xl font-bold">36</div>
+              <div className="text-5xl font-bold">18</div>
               <div className="text-sm mt-2">Years of<br />Experience</div>
             </div>
           </div>

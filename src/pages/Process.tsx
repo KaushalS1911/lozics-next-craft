@@ -192,23 +192,23 @@ const Process = () => {
       title: "Global Reach",
       description: "Extensive supplier network and global logistics capabilities for worldwide delivery",
       icon: Globe,
-      stats: "50+ Countries"
+      stats: "7+ Countries"
     },
     {
       title: "Technical Expertise",
       description: "Deep technical knowledge and engineering capabilities across multiple manufacturing processes",
       icon: Award,
-      stats: "20+ Years Experience"
+      stats: "18+ Years Experience"
     }
   ];
 
   const processStats = [
-    { icon: <Factory className="w-8 h-8" />, value: "185+", label: "Projects Completed" },
-    { icon: <Globe className="w-8 h-8" />, value: "50+", label: "Countries Served" },
+    { icon: <Factory className="w-8 h-8" />, value: "90+", label: "Projects Completed" },
+    { icon: <Globe className="w-8 h-8" />, value: "7+", label: "Countries Served" },
     { icon: <Shield className="w-8 h-8" />, value: "99.8%", label: "Quality Rate" },
     { icon: <Clock className="w-8 h-8" />, value: "98%", label: "On-Time Delivery" },
     { icon: <Users className="w-8 h-8" />, value: "200+", label: "Expert Engineers" },
-    { icon: <Award className="w-8 h-8" />, value: "20+", label: "Years Experience" }
+    { icon: <Award className="w-8 h-8" />, value: "18+", label: "Years Experience" }
   ];
 
   // Animation hooks for different sections
