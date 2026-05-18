@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://noventrasourcing.com/sitemap.xml
+Sitemap: https://www.noventrasourcing.com/sitemap.xml
