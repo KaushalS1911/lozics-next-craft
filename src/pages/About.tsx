@@ -17,6 +17,7 @@ import {
   Truck
 } from "lucide-react";
 import heroBg from "../assets/logo.png";
+import ourStoryImage from "../assets/our-story-global.png";
 
 const About = () => {
   const stats = [
@@ -152,8 +153,12 @@ const About = () => {
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 min-h-96 flex items-center justify-center">
-                    <img src={heroBg} alt="Noventra Global Sourcing Logo" className="w-full max-w-2xl h-auto object-contain" />
+                  <div className="rounded-2xl overflow-hidden shadow-xl">
+                    <img
+                      src={ourStoryImage}
+                      alt="Global manufacturing and supply chain — pumps, valves, and precision components"
+                      className="w-full h-auto object-cover"
+                    />
                   </div>
                   <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary rounded-full flex items-center justify-center">
                     <span className="text-2xl font-bold text-white">2023</span>
