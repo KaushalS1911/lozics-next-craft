@@ -9,74 +9,30 @@ import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
 import heroBg from "../assets/hero-bg.jpg";
 
-// Import images dynamically using Vite's glob import with proper syntax
-// Forgings
-const forgingImages = import.meta.glob('/src/assets/Product Gallary/Forgings/*.png', { eager: true, query: '?url', import: 'default' });
-const forgingImageArray = Object.values(forgingImages) as string[];
+// Import images dynamically from Gallery Images
+const forgingImageArray = Object.values(
+  import.meta.glob('/src/assets/Gallery Images/Forgings/*.png', { eager: true, query: '?url', import: 'default' })
+) as string[];
 
-// Hardware
-const hardwareImages = import.meta.glob('/src/assets/Product Gallary/Hardware/*.jpg', { eager: true, query: '?url', import: 'default' });
-const hardwareImageArray = Object.values(hardwareImages) as string[];
+const hardwareImageArray = Object.values(
+  import.meta.glob('/src/assets/Gallery Images/Hardware/*.jpg', { eager: true, query: '?url', import: 'default' })
+) as string[];
 
-// Investment Castings - Automobile
-const automobileImages = import.meta.glob('/src/assets/Product Gallary/Investment Castings/Automobile Casting/*.png', { eager: true, query: '?url', import: 'default' });
-const automobileImageArray = Object.values(automobileImages) as string[];
+const investmentCastingImageArray = Object.values(
+  import.meta.glob('/src/assets/Gallery Images/Investment/*.{png,jpg,jpeg}', { eager: true, query: '?url', import: 'default' })
+) as string[];
 
-// Investment Castings - Building & Water Treatment
-const buildingImages = import.meta.glob('/src/assets/Product Gallary/Investment Castings/Building & Water Treatment Parts Casting/*.png', { eager: true, query: '?url', import: 'default' });
-const buildingImageArray = Object.values(buildingImages) as string[];
+const precisionMachiningImageArray = Object.values(
+  import.meta.glob('/src/assets/Gallery Images/precision machining/*.{jpg,png}', { eager: true, query: '?url', import: 'default' })
+) as string[];
 
-// Investment Castings - Engineering & Automation
-const engineeringImages = import.meta.glob('/src/assets/Product Gallary/Investment Castings/Engineering & Automation/*.png', { eager: true, query: '?url', import: 'default' });
-const engineeringImageArray = Object.values(engineeringImages) as string[];
+const pressureDieCastingImageArray = Object.values(
+  import.meta.glob('/src/assets/Gallery Images/Pressure Die Casting/*.{jpg,webp}', { eager: true, query: '?url', import: 'default' })
+) as string[];
 
-// Investment Castings - Fire Fighting
-const fireFightingImages = import.meta.glob('/src/assets/Product Gallary/Investment Castings/Fire Fighting Equipment Casting/*.png', { eager: true, query: '?url', import: 'default' });
-const fireFightingImageArray = Object.values(fireFightingImages) as string[];
-
-// Investment Castings - Industrial Pump
-const industrialPumpImages = import.meta.glob('/src/assets/Product Gallary/Investment Castings/Industrial Pump Casting/*.png', { eager: true, query: '?url', import: 'default' });
-const industrialPumpImageArray = Object.values(industrialPumpImages) as string[];
-
-// Investment Castings - Industrial Valve (JPG)
-const industrialValveImages = import.meta.glob('/src/assets/Product Gallary/Investment Castings/Industrial Valve/*.jpg', { eager: true, query: '?url', import: 'default' });
-const industrialValveImageArray = Object.values(industrialValveImages) as string[];
-
-// Investment Castings - Industrial Valve Casting (PNG)
-const industrialValveCastingImages = import.meta.glob('/src/assets/Product Gallary/Investment Castings/Industrial Valve Casting/*.png', { eager: true, query: '?url', import: 'default' });
-const industrialValveCastingImageArray = Object.values(industrialValveCastingImages) as string[];
-
-// Investment Castings - Power Plant
-const powerPlantImages = import.meta.glob('/src/assets/Product Gallary/Investment Castings/Power Plant Boiler Parts Casting/*.png', { eager: true, query: '?url', import: 'default' });
-const powerPlantImageArray = Object.values(powerPlantImages) as string[];
-
-// Investment Castings - Structure & Hardware
-const structureImages = import.meta.glob('/src/assets/Product Gallary/Investment Castings/Structure & Hardware Casting/*.png', { eager: true, query: '?url', import: 'default' });
-const structureImageArray = Object.values(structureImages) as string[];
-
-// Precision Machining
-const precisionMachiningImages = import.meta.glob('/src/assets/Product Gallary/precision machining/*.{jpg,png}', { eager: true, query: '?url', import: 'default' });
-const precisionMachiningImageArray = Object.values(precisionMachiningImages) as string[];
-
-// Pressure Die Casting
-const pressureDieCastingImages = import.meta.glob('/src/assets/Product Gallary/Pressure Die Casting/*.{jpg,webp}', { eager: true, query: '?url', import: 'default' });
-const pressureDieCastingImageArray = Object.values(pressureDieCastingImages) as string[];
-
-// SG-CI Sand Casting - All categories
-const sgciAutomobileImages = import.meta.glob('/src/assets/Product Gallary/SG-CI Sand Casting/Automobile/*.jpg', { eager: true, query: '?url', import: 'default' });
-const sgciAutomobileImageArray = Object.values(sgciAutomobileImages) as string[];
-
-const sgciElectricMotorImages = import.meta.glob('/src/assets/Product Gallary/SG-CI Sand Casting/electric-motor/*.jpg', { eager: true, query: '?url', import: 'default' });
-const sgciElectricMotorImageArray = Object.values(sgciElectricMotorImages) as string[];
-
-const sgciGearBoxImages = import.meta.glob('/src/assets/Product Gallary/SG-CI Sand Casting/Gear Box/*.jpg', { eager: true, query: '?url', import: 'default' });
-const sgciGearBoxImageArray = Object.values(sgciGearBoxImages) as string[];
-
-const sgciGeneralEngImages = import.meta.glob('/src/assets/Product Gallary/SG-CI Sand Casting/General Engineering/*.jpg', { eager: true, query: '?url', import: 'default' });
-const sgciGeneralEngImageArray = Object.values(sgciGeneralEngImages) as string[];
-
-const sgciPumpPartsImages = import.meta.glob('/src/assets/Product Gallary/SG-CI Sand Casting/Pump Parts/*.jpg', { eager: true, query: '?url', import: 'default' });
-const sgciPumpPartsImageArray = Object.values(sgciPumpPartsImages) as string[];
+const sgciCastingImageArray = Object.values(
+  import.meta.glob('/src/assets/Gallery Images/SG-CI Sand Casting/*.jpg', { eager: true, query: '?url', import: 'default' })
+) as string[];
 
 const ProductGallery = () => {
   const navigate = useNavigate();
@@ -84,35 +40,13 @@ const ProductGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<string>("investment-casting");
 
-  // Combine all investment casting images
-  const allInvestmentCastingImages = [
-    ...automobileImageArray,
-    ...buildingImageArray,
-    ...engineeringImageArray,
-    ...fireFightingImageArray,
-    ...industrialPumpImageArray,
-    ...industrialValveImageArray,
-    ...industrialValveCastingImageArray,
-    ...powerPlantImageArray,
-    ...structureImageArray
-  ];
-
-  // Combine all SG-CI casting images
-  const allSGCIImages = [
-    ...sgciAutomobileImageArray,
-    ...sgciElectricMotorImageArray,
-    ...sgciGearBoxImageArray,
-    ...sgciGeneralEngImageArray,
-    ...sgciPumpPartsImageArray
-  ];
-
   const categories = [
     {
       id: "investment-casting",
       name: "Investment Casting",
       description: "Precision investment castings for diverse industrial applications including automotive, pumps, valves, and more",
-      images: allInvestmentCastingImages,
-      count: allInvestmentCastingImages.length
+      images: investmentCastingImageArray,
+      count: investmentCastingImageArray.length
     },
     {
       id: "forgings",
@@ -125,8 +59,8 @@ const ProductGallery = () => {
       id: "sgci-casting",
       name: "Sand Casting",
       description: "Ductile iron castings for automotive, pumps, gearboxes, and general engineering applications",
-      images: allSGCIImages,
-      count: allSGCIImages.length
+      images: sgciCastingImageArray,
+      count: sgciCastingImageArray.length
     },
     {
       id: "pressure-die-casting",
