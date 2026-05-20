@@ -9,30 +9,52 @@ import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
 import heroBg from "../assets/hero-bg.jpg";
 
-// Import images dynamically from Gallery Images
-const forgingImageArray = Object.values(
-  import.meta.glob('/src/assets/Gallery Images/Forgings/*.png', { eager: true, query: '?url', import: 'default' })
-) as string[];
+// Load only image files from Gallery Images (supports nested subfolders)
+const galleryImageModules = import.meta.glob(
+  '/src/assets/Gallery Images/**/*.{png,jpg,jpeg,webp}',
+  { eager: true, query: '?url', import: 'default' }
+) as Record<string, string>;
 
-const hardwareImageArray = Object.values(
-  import.meta.glob('/src/assets/Gallery Images/Hardware/*.jpg', { eager: true, query: '?url', import: 'default' })
-) as string[];
+const GALLERY_FOLDER_TO_CATEGORY: Record<string, string> = {
+  Investment: 'investment-casting',
+  Forgings: 'forgings',
+  'SG-CI Sand Casting': 'sgci-casting',
+  'Pressure Die Casting': 'pressure-die-casting',
+  'precision machining': 'precision-machining',
+  Hardware: 'hardware',
+};
 
-const investmentCastingImageArray = Object.values(
-  import.meta.glob('/src/assets/Gallery Images/Investment/*.{png,jpg,jpeg}', { eager: true, query: '?url', import: 'default' })
-) as string[];
+const isGalleryImageFile = (filePath: string): boolean => {
+  const filename = filePath.split('/').pop() ?? '';
+  return (
+    !filename.startsWith('.') &&
+    !/^Screenshot\s/i.test(filename)
+  );
+};
 
-const precisionMachiningImageArray = Object.values(
-  import.meta.glob('/src/assets/Gallery Images/precision machining/*.{jpg,png}', { eager: true, query: '?url', import: 'default' })
-) as string[];
+const getCategoryFromGalleryPath = (filePath: string): string | null => {
+  const segments = filePath.split('Gallery Images/')[1]?.split('/') ?? [];
+  for (const segment of segments) {
+    const categoryId = GALLERY_FOLDER_TO_CATEGORY[segment];
+    if (categoryId) return categoryId;
+  }
+  return null;
+};
 
-const pressureDieCastingImageArray = Object.values(
-  import.meta.glob('/src/assets/Gallery Images/Pressure Die Casting/*.{jpg,webp}', { eager: true, query: '?url', import: 'default' })
-) as string[];
+const galleryImagesByCategory = Object.entries(galleryImageModules).reduce<
+  Record<string, string[]>
+>((acc, [path, url]) => {
+  if (!url || !isGalleryImageFile(path)) return acc;
 
-const sgciCastingImageArray = Object.values(
-  import.meta.glob('/src/assets/Gallery Images/SG-CI Sand Casting/*.jpg', { eager: true, query: '?url', import: 'default' })
-) as string[];
+  const categoryId = getCategoryFromGalleryPath(path);
+  if (!categoryId) return acc;
+
+  if (!acc[categoryId]) acc[categoryId] = [];
+  if (!acc[categoryId].includes(url)) acc[categoryId].push(url);
+  return acc;
+}, {});
+
+Object.values(galleryImagesByCategory).forEach((images) => images.sort());
 
 const ProductGallery = () => {
   const navigate = useNavigate();
@@ -45,43 +67,43 @@ const ProductGallery = () => {
       id: "investment-casting",
       name: "Investment Casting",
       description: "Precision investment castings for diverse industrial applications including automotive, pumps, valves, and more",
-      images: investmentCastingImageArray,
-      count: investmentCastingImageArray.length
+      images: galleryImagesByCategory['investment-casting'] ?? [],
+      count: galleryImagesByCategory['investment-casting']?.length ?? 0
     },
     {
       id: "forgings",
       name: "Forgings",
       description: "High-quality forged components for automotive and industrial applications",
-      images: forgingImageArray,
-      count: forgingImageArray.length
+      images: galleryImagesByCategory['forgings'] ?? [],
+      count: galleryImagesByCategory['forgings']?.length ?? 0
     },
     {
       id: "sgci-casting",
       name: "Sand Casting",
       description: "Ductile iron castings for automotive, pumps, gearboxes, and general engineering applications",
-      images: sgciCastingImageArray,
-      count: sgciCastingImageArray.length
+      images: galleryImagesByCategory['sgci-casting'] ?? [],
+      count: galleryImagesByCategory['sgci-casting']?.length ?? 0
     },
     {
       id: "pressure-die-casting",
       name: "Pressure Die Casting",
       description: "High-pressure die cast aluminum components",
-      images: pressureDieCastingImageArray,
-      count: pressureDieCastingImageArray.length
+      images: galleryImagesByCategory['pressure-die-casting'] ?? [],
+      count: galleryImagesByCategory['pressure-die-casting']?.length ?? 0
     },
     {
       id: "precision-machining",
       name: "Precision Machining",
       description: "CNC machined parts with tight tolerances",
-      images: precisionMachiningImageArray,
-      count: precisionMachiningImageArray.length
+      images: galleryImagesByCategory['precision-machining'] ?? [],
+      count: galleryImagesByCategory['precision-machining']?.length ?? 0
     },
     {
       id: "hardware",
       name: "Hardware Components",
       description: "Precision hardware components and fasteners",
-      images: hardwareImageArray,
-      count: hardwareImageArray.length
+      images: galleryImagesByCategory['hardware'] ?? [],
+      count: galleryImagesByCategory['hardware']?.length ?? 0
     },
 
 
@@ -123,11 +145,11 @@ const ProductGallery = () => {
 
     return (
       <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {images.map((image, index) => {
+        {images.map((image) => {
           const imageName = formatImageName(image);
           return (
             <div
-              key={index}
+              key={image}
               className="group relative aspect-square overflow-hidden rounded-lg bg-gray-100 cursor-pointer hover:shadow-lg transition-all duration-300"
               onClick={() => setSelectedImage(image)}
             >
